@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DietApp</title>
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id='header'>
+  <!-- Header Image Displayes here --> </div>
+<div id='menu'>
+  <div id="navbar">
+    <ul>
+      <li><a href="/home">Home</a></li>
+      <li><a href="/about">About us</a></li>
+      <li><a href="/contact">Contact us</a></li>
+      <li><a href="/diet_planner">Diet Planner</a></li>
+      <li><a href="/healthy_recipes">Healthy Recipes</a></li>
+      <li><a href="/news">Healthy living News</a></li>
+      <li><%= link_to 'Login', new_user_session_path %></li>
+      <li><%= link_to 'Logout', destroy_user_session_path, :method => :delete %></li>
+    </ul>
+  </div>
+</div>
+<div id='container'>
+  <div id='content'>
+    <p class="notice"><%= notice %></p>
+
+    <p class="alert"><%= alert %></p>
+    <%= yield %>
+    <% if user_signed_in? %>
+        <div>Signed in as... <%= current_user.email %>
+          (<%= link_to 'Sign out', destroy_user_session_path, :method => :delete
+        %>)
+        </div>
+    <% else %>
+        <%= link_to 'Register', new_user_registration_path %> or <%= link_to 'Sign in', new_user_session_path %>
+    <% end %>
+
+  </div>
+</div>
+</body>
+</html>

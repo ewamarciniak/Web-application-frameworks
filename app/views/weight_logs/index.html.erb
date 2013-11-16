@@ -1,0 +1,25 @@
+<h1>Listing weight logs</h1>
+
+<table>
+  <tr>
+    <th>Weight</th>
+    <th>Date of measurement</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @weight_logs.each do |weight_log| %>
+  <tr>
+    <td><%= weight_log.weight %></td>
+    <td><%= weight_log.measured_on %></td>
+    <td><%= link_to 'Show', weight_log %></td>
+    <td><%= link_to 'Edit', edit_weight_log_path(weight_log) %></td>
+    <td><%= link_to 'Destroy', weight_log, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Weight log', new_weight_log_path %>
