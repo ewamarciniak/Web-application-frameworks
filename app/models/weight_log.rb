@@ -4,4 +4,5 @@ class WeightLog < ActiveRecord::Base
 
   validates :weight, numericality: {greater_than_or_equal_to: 20}
   validates :weight, presence: true
+  validates :measured_on, presence: true
 end

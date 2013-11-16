@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  calories: 1
+  protein: 1
+  carbohydrates: 1
+  sugars: 1
+  saturated_fats: 1
+  unsaturated_fats: 1
+  cholesterol: 1
+  fibre: 1
+
+two:
+  name: MyString
+  calories: 1
+  protein: 1
+  carbohydrates: 1
+  sugars: 1
+  saturated_fats: 1
+  unsaturated_fats: 1
+  cholesterol: 1
+  fibre: 1

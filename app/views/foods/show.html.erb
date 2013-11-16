@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @food.name %>
+</p>
+
+<p>
+  <b>Calories:</b>
+  <%= @food.calories %>
+</p>
+
+<p>
+  <b>Protein:</b>
+  <%= @food.protein %>
+</p>
+
+<p>
+  <b>Carbohydrates:</b>
+  <%= @food.carbohydrates %>
+</p>
+
+<p>
+  <b>Sugars:</b>
+  <%= @food.sugars %>
+</p>
+
+<p>
+  <b>Saturated fats:</b>
+  <%= @food.saturated_fats %>
+</p>
+
+<p>
+  <b>Unsaturated fats:</b>
+  <%= @food.unsaturated_fats %>
+</p>
+
+<p>
+  <b>Cholesterol:</b>
+  <%= @food.cholesterol %>
+</p>
+
+<p>
+  <b>Fibre:</b>
+  <%= @food.fibre %>
+</p>
+
+
+<%= link_to 'Edit', edit_food_path(@food) %> |
+<%= link_to 'Back', foods_path %>
