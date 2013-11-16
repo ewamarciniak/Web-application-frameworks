@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  intake_date: 2013-11-16
+  intake_time: 2013-11-16 12:33:41
+  food: 
+  amount: 1
+  user: 
+
+two:
+  intake_date: 2013-11-16
+  intake_time: 2013-11-16 12:33:41
+  food: 
+  amount: 1
+  user: 

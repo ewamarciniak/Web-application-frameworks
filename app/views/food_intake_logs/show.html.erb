@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Intake date:</b>
+  <%= @food_intake_log.intake_date %>
+</p>
+
+<p>
+  <b>Intake time:</b>
+  <%= @food_intake_log.intake_time %>
+</p>
+
+<p>
+  <b>Food:</b>
+  <%= @food_intake_log.food %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%= @food_intake_log.amount %>
+</p>
+
+<%= link_to 'Edit', edit_food_intake_log_path(@food_intake_log) %> |
+<%= link_to 'Back', food_intake_logs_path %>

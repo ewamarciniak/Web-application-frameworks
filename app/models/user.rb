@@ -17,5 +17,6 @@ class User < ActiveRecord::Base
             :length => {:minimum => 6, :maximum => 15, :on => :create}
 
   has_many :weight_logs
+  has_many :food_intake_logs
 
 end

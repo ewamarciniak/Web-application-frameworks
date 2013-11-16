@@ -1,0 +1,29 @@
+<h1>Your food intake logs</h1>
+
+<table>
+  <tr>
+    <th>Intake date</th>
+    <th>Intake time</th>
+    <th>Food</th>
+    <th>Amount[grams]</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @food_intake_logs.each do |food_intake_log| %>
+  <tr>
+    <td><%= food_intake_log.intake_date %></td>
+    <td><%= food_intake_log.intake_time %></td>
+    <td><%= food_intake_log.food.name %></td>
+    <td><%= food_intake_log.amount %></td>
+    <td><%= link_to 'Show', food_intake_log %></td>
+    <td><%= link_to 'Edit', edit_food_intake_log_path(food_intake_log) %></td>
+    <td><%= link_to 'Destroy', food_intake_log, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Food intake log', new_food_intake_log_path %>

@@ -1,0 +1,41 @@
+<%= form_for(@food_intake_log) do |f| %>
+    <% if @food_intake_log.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@food_intake_log.errors.count, "error") %> prohibited this food_intake_log from being
+            saved:</h2>
+
+          <ul>
+            <% @food_intake_log.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :intake_date %>
+      <br/>
+      <%= f.date_select :intake_date %>
+    </div>
+    <div class="field">
+      <%= f.label :intake_time %>
+      <br/>
+      <%= f.time_select :intake_time %>
+    </div>
+    <div class="field">
+      <%= f.label :food %>
+      <br/>
+      <%= collection_select(:food_intake_log, :food_id, Food.all, :id, :name) %>
+    </div>
+    <div class="field">
+      <%= f.label :amount_in_grams %>
+      <br/>
+      <%= f.number_field :amount %>
+    </div>
+    <div class="field">
+      <%= f.hidden_field :user_id, :value => current_user.id %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>

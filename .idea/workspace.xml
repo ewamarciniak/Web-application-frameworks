@@ -26,17 +26,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="..users" pinned="false" current="false" current-in-tab="false">
-        <entry file="dbDummy://dbElement:/c5a37b3b/1b4449fb-3a08-42a1-a1ec-52e6f87403a0/..users">
-          <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-            <state />
+      <file leaf-file-name="food.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/food.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="11" selection-start="194" selection-end="194" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/foods/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="27" selection-start="652" selection-end="652" vertical-scroll-proportion="0.0">
+            <state line="19" column="16" selection-start="502" selection-end="502" vertical-scroll-proportion="-0.65384614">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/food_intake_logs/_form.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="38" column="34" selection-start="1112" selection-end="1112" vertical-scroll-proportion="-13.807693">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="food_intake_logs_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/food_intake_logs_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="13" selection-start="481" selection-end="481" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="food_intake_log.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/food_intake_log.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="66" selection-start="107" selection-end="107" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -49,55 +78,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20131116115135_change_datatypes_in_foods_table.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20131116115135_change_datatypes_in_foods_table.rb">
+      <file leaf-file-name="..food_intake_logs" pinned="false" current="false" current-in-tab="false">
+        <entry file="dbDummy://dbElement:/c5a37b3b/1b4449fb-3a08-42a1-a1ec-52e6f87403a0/..food_intake_logs">
+          <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/foods/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="59" selection-start="865" selection-end="865" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.65384614">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_form.html.erb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/foods/_form.html.erb">
+      <file leaf-file-name="edit.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/food_intake_logs/edit.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="16" selection-start="502" selection-end="502" vertical-scroll-proportion="0.49353448">
+            <state line="4" column="16" selection-start="72" selection-end="72" vertical-scroll-proportion="-2.6153846">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="food.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/food.rb">
+      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/food_intake_logs/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="23" selection-start="164" selection-end="164" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/weight_logs/_form.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="14" selection-start="436" selection-end="436" vertical-scroll-proportion="-5.6538463">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="20131116112435_create_foods.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20131116112435_create_foods.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="10" selection-start="371" selection-end="371" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="foods_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/foods_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="29" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0">
+            <state line="7" column="26" selection-start="141" selection-end="141" vertical-scroll-proportion="0.25646552">
               <folding />
             </state>
           </provider>
@@ -113,22 +122,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-        <option value="$PROJECT_DIR$/db/migrate/20131115235844_create_weight_logs.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/weight_logs_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/weight_logs/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/weight_logs/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/weight_logs/new.html.erb" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/db/migrate/20131116100917_add_admin_to_users.rb" />
         <option value="$PROJECT_DIR$/app/controllers/site_controller.rb" />
-        <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/app/models/weight_log.rb" />
         <option value="$PROJECT_DIR$/app/controllers/foods_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20131116115135_change_datatypes_in_foods_table.rb" />
         <option value="$PROJECT_DIR$/app/views/foods/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/food_intake_logs_controller.rb" />
+        <option value="$PROJECT_DIR$/app/models/user.rb" />
+        <option value="$PROJECT_DIR$/app/models/food.rb" />
+        <option value="$PROJECT_DIR$/app/views/food_intake_logs/edit.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/food_intake_logs/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/food_intake_logs/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/food_intake_logs/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/food_intake_log.rb" />
+        <option value="$PROJECT_DIR$/app/views/food_intake_logs/index.html.erb" />
       </list>
     </option>
   </component>
@@ -366,6 +375,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="food_intake_logs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="diet_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="diet_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -417,6 +448,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="Database.TableEditor.Splitter" value="0.9" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
@@ -675,63 +707,93 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20131115235844_create_weight_logs.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="65" selection-start="536" selection-end="536" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20131116100917_add_admin_to_users.rb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20131116123341_create_food_intake_logs.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="42" selection-start="130" selection-end="130" vertical-scroll-proportion="0.0">
+        <state line="10" column="30" selection-start="261" selection-end="261" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/user.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="59" selection-start="815" selection-end="815" vertical-scroll-proportion="0.0">
+        <state line="19" column="2" selection-start="813" selection-end="839" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/weight_log.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/weight_logs/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="38" selection-start="261" selection-end="261" vertical-scroll-proportion="0.0">
+        <state line="21" column="0" selection-start="578" selection-end="670" vertical-scroll-proportion="-9.576923">
+          <folding>
+            <marker date="1384561928611" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1384561928611" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1384561928611" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1384561928611" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1384561928611" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1384561928611" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/food_intake_logs/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="16" selection-start="46" selection-end="46" vertical-scroll-proportion="-1.3076923">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/site_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/food_intake_logs/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="6" selection-start="69" selection-end="69" vertical-scroll-proportion="0.0">
+        <state line="17" column="19" selection-start="233" selection-end="233" vertical-scroll-proportion="-11.115385">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/weight_logs_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/foods/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="2" selection-start="53" selection-end="86" vertical-scroll-proportion="0.0">
+        <state line="19" column="16" selection-start="502" selection-end="502" vertical-scroll-proportion="-0.65384614">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbElement:/c5a37b3b/1b4449fb-3a08-42a1-a1ec-52e6f87403a0/..users">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/foods_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/food_intake_logs_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="29" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0">
+        <state line="18" column="13" selection-start="481" selection-end="481" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/food_intake_logs/edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="27" selection-start="652" selection-end="652" vertical-scroll-proportion="0.0">
+        <state line="4" column="16" selection-start="72" selection-end="72" vertical-scroll-proportion="-2.6153846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/food.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="11" selection-start="194" selection-end="194" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/food_intake_logs/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="34" selection-start="1112" selection-end="1112" vertical-scroll-proportion="-13.807693">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/food_intake_log.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="66" selection-start="107" selection-end="107" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -741,44 +803,21 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20131116112435_create_foods.rb">
+    <entry file="dbDummy://dbElement:/c5a37b3b/1b4449fb-3a08-42a1-a1ec-52e6f87403a0/..food_intake_logs">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/foods/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="10" selection-start="371" selection-end="371" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.65384614">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20131116115135_change_datatypes_in_foods_table.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/food_intake_logs/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="59" selection-start="865" selection-end="865" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/weight_logs/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="14" selection-start="436" selection-end="436" vertical-scroll-proportion="-5.6538463">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="37" selection-start="1063" selection-end="1063" vertical-scroll-proportion="0.7979592">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/food.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="23" selection-start="164" selection-end="164" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/foods/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="16" selection-start="502" selection-end="502" vertical-scroll-proportion="0.49353448">
+        <state line="7" column="26" selection-start="141" selection-end="141" vertical-scroll-proportion="0.25646552">
           <folding />
         </state>
       </provider>
