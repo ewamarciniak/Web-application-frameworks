@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Length:</b>
+  <%= @exercise_log.length %>
+</p>
+
+<p>
+  <b>Calories burned:</b>
+  <%= @exercise_log.calories_burned %>
+</p>
+
+<p>
+  <b>Activity:</b>
+  <%= @exercise_log.activity.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_exercise_log_path(@exercise_log) %> |
+<%= link_to 'Back', exercise_logs_path %>

@@ -1,4 +1,5 @@
 class FoodIntakeLogsController < ApplicationController
+  before_filter :authenticate_user!
   # GET /food_intake_logs
   # GET /food_intake_logs.json
   def index

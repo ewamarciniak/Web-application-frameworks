@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  length: 1
+  calories_burned: 1
+  user: 
+  activity: 
+
+two:
+  length: 1
+  calories_burned: 1
+  user: 
+  activity: 

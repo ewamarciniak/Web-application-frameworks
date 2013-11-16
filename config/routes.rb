@@ -1,4 +1,10 @@
 DietApp::Application.routes.draw do
+  resources :exercise_logs
+
+
+  resources :activities
+
+
   resources :food_intake_logs
 
 

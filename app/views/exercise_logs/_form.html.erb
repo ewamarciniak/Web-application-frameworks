@@ -1,0 +1,27 @@
+<%= form_for(@exercise_log) do |f| %>
+  <% if @exercise_log.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@exercise_log.errors.count, "error") %> prohibited this exercise_log from being saved:</h2>
+
+      <ul>
+      <% @exercise_log.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :length_in_minutes %><br />
+    <%= f.number_field :length %>
+  </div>
+  <div class="field">
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+  </div>
+  <div class="field">
+    <%= collection_select(:exercise_log, :activity_id, Activity.all, :id, :name) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
