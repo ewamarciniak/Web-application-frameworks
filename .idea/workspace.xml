@@ -44,10 +44,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/weight_logs/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="12" selection-start="87" selection-end="87" vertical-scroll-proportion="0.17102616">
+            <state line="5" column="12" selection-start="87" selection-end="87" vertical-scroll-proportion="-3.2692308">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="33" selection-start="375" selection-end="375" vertical-scroll-proportion="0.34136546">
               <folding />
             </state>
           </provider>
@@ -101,6 +110,7 @@
         <option value="$PROJECT_DIR$/app/views/weight_logs/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/models/weight_log.rb" />
         <option value="$PROJECT_DIR$/app/views/weight_logs/new.html.erb" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -625,13 +635,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="26" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="56" selection-start="890" selection-end="890" vertical-scroll-proportion="0.0">
@@ -732,7 +735,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/weight_logs/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="12" selection-start="87" selection-end="87" vertical-scroll-proportion="0.17102616">
+        <state line="5" column="12" selection-start="87" selection-end="87" vertical-scroll-proportion="-3.2692308">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="33" selection-start="375" selection-end="375" vertical-scroll-proportion="0.34136546">
           <folding />
         </state>
       </provider>
