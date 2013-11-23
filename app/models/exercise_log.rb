@@ -1,5 +1,5 @@
 class ExerciseLog < ActiveRecord::Base
-  attr_accessible :calories_burned, :length, :user_id, :activity_id
+  attr_accessible :calories_burned, :length, :user_id, :activity_id, :exercise_date
   belongs_to :user
   belongs_to :activity
 

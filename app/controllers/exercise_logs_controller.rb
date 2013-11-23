@@ -59,7 +59,6 @@ class ExerciseLogsController < ApplicationController
   # PUT /exercise_logs/1.json
   def update
     @exercise_log = ExerciseLog.find(params[:id])
-    require 'debugger'; debugger
     @exercise_log.length = params[:exercise_log][:length]
     @exercise_log.calories_burned = @exercise_log.calculate_calories_burned
 
