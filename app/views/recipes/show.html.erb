@@ -1,0 +1,40 @@
+<h1><%= @recipe.title %></h1>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Cooking time:</b>
+  <%= @recipe.cooking_time %> min
+</p>
+
+<p>
+  <b>Preparation time:</b>
+  <%= @recipe.preparation_time %> min
+</p>
+<p>
+  <b>Ready in:</b>
+  <%= @recipe.ready_in_time %> min
+</p>
+
+<p>
+  <b>Calories per portion:</b>
+  <%= @recipe.calories_per_portion %>
+</p>
+
+<p>
+  <b>Number of portions:</b>
+  <%= @recipe.number_of_portions %>
+</p>
+
+<p>
+  <b>Shopping list:</b>
+  <%= @recipe.shopping_list %>
+</p>
+
+<p>
+  <b>Directions:</b>
+  <%= @recipe.directions %>
+</p>
+
+<%= link_to 'Edit', edit_recipe_path(@recipe) %> |
+<%= link_to 'Back', recipes_path %>

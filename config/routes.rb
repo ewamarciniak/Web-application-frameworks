@@ -1,4 +1,10 @@
 DietApp::Application.routes.draw do
+  resources :recipes
+
+
+  resources :ingredients
+
+
   resources :food_categories
 
 

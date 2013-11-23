@@ -1,0 +1,29 @@
+<h1 xmlns="http://www.w3.org/1999/html">Healthy recipes</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Ready in</th>
+    <th>Calories per portion</th>
+    <th>Ingredients</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @recipes.each do |recipe| %>
+  <tr>
+    <td><%= recipe.title %></td>
+    <td><%= recipe.ready_in_time %> minutes</td>
+    <td><%= recipe.calories_per_portion %></td>
+    <td><%= recipe.ingredients.map(&:name).join(", ") %></td>
+    <td><%= link_to 'Show', recipe %></td>
+    <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
+    <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Recipe', new_recipe_path, class: "button radius" %>

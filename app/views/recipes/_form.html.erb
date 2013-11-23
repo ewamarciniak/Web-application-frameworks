@@ -1,0 +1,88 @@
+<%= form_for(@recipe) do |f| %>
+    <% if @recipe.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
+
+          <ul>
+            <% @recipe.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="row collapse">
+      <div class="small-3 columns">
+        <%= f.label :title, class: "right inline", title: "Recipe Title", data: {tooltip: true} %>
+      </div>
+      <div class="small-9 columns">
+        <%= f.text_field :title %>
+      </div>
+    </div>
+    <div class="row collapse">
+      <div class="small-3 columns">
+        <%= f.label :directions, class: "right inline", title: "Instructions on how to prepare the dish", data: {tooltip: true} %>
+      </div>
+      <div class="small-9 columns">
+        <%= f.text_area :directions %>
+      </div>
+    </div>
+    <div class="row collapse">
+      <div class="small-3 columns">
+        <%= f.label :cooking_time, class: "right inline", title: "Cooking time in minutes", data: {tooltip: true} %>
+      </div>
+      <div class="small-9 columns">
+        <%= f.number_field :cooking_time %>
+      </div>
+    </div>
+    <div class="row collapse">
+      <div class="small-3 columns">
+        <%= f.label :preparation_time, class: "right inline", title: "Preparation time in minutes", data: {tooltip: true} %>
+      </div>
+      <div class="small-9 columns">
+        <%= f.number_field :preparation_time %>
+      </div>
+    </div>
+    <div class="row collapse">
+      <div class="small-3 columns">
+        <%= f.label :calories_per_portion, class: "right inline", title: "Number of Calories per portion", data: {tooltip: true} %>
+      </div>
+      <div class="small-9 columns">
+        <%= f.number_field :calories_per_portion %>
+      </div>
+    </div>
+    <div class="row collapse">
+      <div class="small-3 columns">
+        <%= f.label :number_of_portions, class: "right inline", title: "Number of portions per recipe", data: {tooltip: true} %>
+      </div>
+      <div class="small-9 columns">
+        <%= f.number_field :number_of_portions %>
+      </div>
+    </div>
+    <div class="row collapse">
+      <div class="small-3 columns">
+        <%= f.label :shopping_list, class: "right inline", title: "All the ingredients with the amounts", data: {tooltip: true} %>
+      </div>
+      <div class="small-9 columns">
+        <%= f.text_area :shopping_list %>
+      </div>
+    </div>
+    <div class="row collapse">
+      <div class="small-3 columns">
+        <%= f.label :ingredients, class: "right inline", title: "All the ingredients included", data: {tooltip: true} %>
+      </div>
+      <div class="small-9 columns">
+        <% @ingredients.each do |ingredient| %>
+            <p>
+              <%= check_box_tag "recipe[ingredient_ids][]", ingredient.id, @recipe.ingredients.include?(ingredient) %>
+              <%= ingredient.name %>
+            </p>
+        <% end %>
+      </div>
+    </div>
+    <div class="row collapse">
+      <div class="small-9 small-offset-3 columns">
+        <%= f.submit %>
+      </div>
+    </div>
+<% end %>

@@ -1,4 +1,5 @@
 class FoodCategoriesController < ApplicationController
+  before_filter :ensure_admin
   # GET /food_categories
   # GET /food_categories.json
   def index

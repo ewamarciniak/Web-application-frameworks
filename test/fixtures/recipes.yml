@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  directions: MyString
+  text: MyString
+  cooking_time: MyString
+  integer: MyString
+  preparation_time: 1
+  calories_per_portion: 1
+  number_of_portions: 1
+  shopping_list: MyText
+
+two:
+  title: MyString
+  directions: MyString
+  text: MyString
+  cooking_time: MyString
+  integer: MyString
+  preparation_time: 1
+  calories_per_portion: 1
+  number_of_portions: 1
+  shopping_list: MyText
