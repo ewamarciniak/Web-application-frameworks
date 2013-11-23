@@ -1,0 +1,42 @@
+<h1>Sign in</h1>
+
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+    <div class="row collapse">
+      <div class="small-3 columns">
+        <%= f.label :email, class: "right inline", title: "Type of activity", data: {tooltip: true} %>
+      </div>
+      <div class="small-9 columns">
+        <%= f.email_field :email %>
+      </div>
+    </div>
+    <div class="row collapse">
+      <div class="small-3 columns">
+        <%= f.label :password, class: "right inline", title: "Type of activity", data: {tooltip: true} %>
+      </div>
+      <div class="small-9 columns">
+        <%= f.password_field :password %>
+      </div>
+    </div>
+
+    <% if devise_mapping.rememberable? -%>
+        <div class="row collapse">
+          <div class="small-3 columns">
+            <%= f.label :remember_me, class: "right inline" %>
+          </div>
+          <div class="small-9 columns">
+            <%= f.check_box :remember_me %>
+          </div>
+        </div>
+    <% end -%>
+    <div class="row collapse">
+      <div class="small-9 small-offset-3 columns">
+        <%= f.submit "Sign in" %>
+      </div>
+    </div>
+<% end %>
+<div class="row collapse">
+  <div class="small-9 small-offset-3 columns">
+    <%= render "devise/shared/links" %>
+  </div>
+</div>
+
