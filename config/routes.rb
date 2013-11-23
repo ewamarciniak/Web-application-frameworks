@@ -1,4 +1,7 @@
 DietApp::Application.routes.draw do
+  resources :food_categories
+
+
   resources :exercise_logs
 
 

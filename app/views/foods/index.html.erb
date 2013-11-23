@@ -11,6 +11,7 @@
     <th>Unsaturated fats</th>
     <th>Cholesterol</th>
     <th>Fibre</th>
+    <th>Category</th>
     <th></th>
     <th></th>
     <th></th>
@@ -27,6 +28,7 @@
     <td><%= food.unsaturated_fats %></td>
     <td><%= food.cholesterol %></td>
     <td><%= food.fibre %></td>
+    <td><%= food.food_category.name %></td>
     <td><%= link_to 'Show', food %></td>
     <td><%= link_to 'Edit', edit_food_path(food) %></td>
     <td><%= link_to 'Destroy', food, method: :delete, data: { confirm: 'Are you sure?' } %></td>

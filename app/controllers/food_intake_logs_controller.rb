@@ -42,6 +42,14 @@ class FoodIntakeLogsController < ApplicationController
   # POST /food_intake_logs.json
   def create
     @food_intake_log = FoodIntakeLog.new(params[:food_intake_log])
+    @food_intake_log.calories = @food_intake_log.calculate_calories_intake
+    @food_intake_log.carbohydrates = @food_intake_log.calculate_carbohydrates_intake
+    @food_intake_log.cholesterol = @food_intake_log.calculate_cholesterol_intake
+    @food_intake_log.fibre = @food_intake_log.calculate_fibre_intake
+    @food_intake_log.protein = @food_intake_log.calculate_protein_intake
+    @food_intake_log.saturated_fats = @food_intake_log.calculate_saturated_fats_intake
+    @food_intake_log.unsaturated_fats = @food_intake_log.calculate_unsaturated_fats_intake
+    @food_intake_log.sugars = @food_intake_log.calculate_sugars_intake
 
     respond_to do |format|
       if @food_intake_log.save
@@ -58,6 +66,14 @@ class FoodIntakeLogsController < ApplicationController
   # PUT /food_intake_logs/1.json
   def update
     @food_intake_log = FoodIntakeLog.find(params[:id])
+    @food_intake_log.calories = @food_intake_log.calculate_calories_intake
+    @food_intake_log.carbohydrates = @food_intake_log.calculate_carbohydrates_intake
+    @food_intake_log.cholesterol = @food_intake_log.calculate_cholesterol_intake
+    @food_intake_log.fibre = @food_intake_log.calculate_fibre_intake
+    @food_intake_log.protein = @food_intake_log.calculate_protein_intake
+    @food_intake_log.saturated_fats = @food_intake_log.calculate_saturated_fats_intake
+    @food_intake_log.unsaturated_fats = @food_intake_log.calculate_unsaturated_fats_intake
+    @food_intake_log.sugars = @food_intake_log.calculate_sugars_intake
 
     respond_to do |format|
       if @food_intake_log.update_attributes(params[:food_intake_log])

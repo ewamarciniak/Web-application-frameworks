@@ -33,7 +33,8 @@
         <%= f.label :food, class: "right inline", title: "Type of food", data: {tooltip: true} %>
       </div>
       <div class="small-9 columns">
-        <%= collection_select(:food_intake_log, :food_id, Food.all, :id, :name) %>
+        <%= f.grouped_collection_select :food_id, FoodCategory.order(:name), :foods, :name, :id, :name, include_blank: true %>
+
       </div>
     </div>
     <div class="row collapse">
