@@ -12,30 +12,44 @@
         </div>
     <% end %>
 
-    <div class="field">
-      <%= f.label :intake_date %>
-      <br/>
-      <%= f.date_select :intake_date %>
+    <div class="row collapse">
+      <div class="small-3 columns">
+        <%= f.label :intake_date, class: "right inline", title: "Date of the meal", data: {tooltip: true} %>
+      </div>
+      <div class="small-9 columns date">
+        <%= f.date_select :intake_date %>
+      </div>
     </div>
-    <div class="field">
-      <%= f.label :intake_time %>
-      <br/>
-      <%= f.time_select :intake_time %>
+    <div class="row collapse">
+      <div class="small-3 columns">
+        <%= f.label :intake_time, class: "right inline", title: "Time of the meal", data: {tooltip: true} %>
+      </div>
+      <div class="small-9 columns">
+        <%= f.time_select :intake_time %>
+      </div>
     </div>
-    <div class="field">
-      <%= f.label :food %>
-      <br/>
-      <%= collection_select(:food_intake_log, :food_id, Food.all, :id, :name) %>
+    <div class="row collapse">
+      <div class="small-3 columns">
+        <%= f.label :food, class: "right inline", title: "Type of food", data: {tooltip: true} %>
+      </div>
+      <div class="small-9 columns">
+        <%= collection_select(:food_intake_log, :food_id, Food.all, :id, :name) %>
+      </div>
     </div>
-    <div class="field">
-      <%= f.label :amount_in_grams %>
-      <br/>
-      <%= f.number_field :amount %>
+    <div class="row collapse">
+      <div class="small-3 columns">
+        <%= f.label :amount_in_grams, class: "right inline", title: "How many grams", data: {tooltip: true} %>
+      </div>
+      <div class="small-9 columns">
+        <%= f.number_field :amount %>
+      </div>
     </div>
-    <div class="field">
+    <div>
       <%= f.hidden_field :user_id, :value => current_user.id %>
     </div>
-    <div class="actions">
-      <%= f.submit %>
+    <div class="row collapse">
+      <div class="small-9 small-offset-3 columns">
+        <%= f.submit %>
+      </div>
     </div>
 <% end %>

@@ -11,18 +11,32 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :weight %><br />
-    <%= f.text_field :weight %>
-  </div>
-  <div class="field">
-    <%= f.label :date_of_measurement %><br />
-    <%= f.date_select :measured_on %>
-  </div>
-  <div class="field">
+
+    <div class="row collapse">
+      <div class="small-3 columns">
+        <%= f.label :weight, class: "right inline", title: "Weight in kilograms", data: {tooltip: true} %>
+      </div>
+      <div class="small-9 columns">
+        <%= f.text_field :weight %>
+      </div>
+    </div>
+    <div class="row collapse">
+      <div class="small-3 columns">
+        <%= f.label :date_of_measurement, class: "right inline", title: "Select the date of the weight measurement", data: {tooltip: true} %>
+      </div>
+      <div class="small-9 columns">
+        <%= f.date_select :measured_on %>
+      </div>
+    </div>
+
+
+
+  <div>
     <%= f.hidden_field :user_id, :value => current_user.id %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="row collapse">
+      <div class="small-9 small-offset-3 columns">
+        <%= f.submit %>
+      </div>
+    </div>
 <% end %>

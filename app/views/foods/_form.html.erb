@@ -1,53 +1,90 @@
 <%= form_for(@food) do |f| %>
-  <% if @food.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@food.errors.count, "error") %> prohibited this food from being saved:</h2>
+    <% if @food.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@food.errors.count, "error") %> prohibited this food from being saved:</h2>
 
-      <ul>
-      <% @food.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+          <ul>
+            <% @food.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+    <div class="row collapse">
+      <div class="small-3 columns">
+        <%= f.label :name, class: "right inline", title: "Name content in grams", data: {tooltip: true} %>
+      </div>
+      <div class="small-9 columns">
+        <%= f.text_field :name %>
+      </div>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :calories %><br />
-    <%= f.number_field :calories %>
-  </div>
-  <div class="field">
-    <%= f.label :protein %><br />
-    <%= f.text_field :protein %>
-  </div>
-  <div class="field">
-    <%= f.label :carbohydrates %><br />
-    <%= f.text_field :carbohydrates %>
-  </div>
-  <div class="field">
-    <%= f.label :sugars %><br />
-    <%= f.text_field :sugars %>
-  </div>
-  <div class="field">
-    <%= f.label :saturated_fats %><br />
-    <%= f.text_field :saturated_fats %>
-  </div>
-  <div class="field">
-    <%= f.label :unsaturated_fats %><br />
-    <%= f.text_field :unsaturated_fats %>
-  </div>
-  <div class="field">
-    <%= f.label :cholesterol %><br />
-    <%= f.text_field :cholesterol %>
-  </div>
-  <div class="field">
-    <%= f.label :fibre %><br />
-    <%= f.text_field :fibre %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="row collapse">
+      <div class="small-3 columns">
+        <%= f.label :calories, class: "right inline", title: "Calories content in grams", data: {tooltip: true} %>
+      </div>
+      <div class="small-9 columns">
+        <%= f.number_field :calories %>
+      </div>
+    </div>
+    <div class="row collapse">
+      <div class="small-3 columns">
+        <%= f.label :protein, class: "right inline", title: "Protein content in grams", data: {tooltip: true} %>
+      </div>
+      <div class="small-9 columns">
+        <%= f.text_field :protein %>
+      </div>
+    </div>
+    <div class="row collapse">
+      <div class="small-3 columns">
+        <%= f.label :carbohydrates, class: "right inline", title: "Carbohydrates content in grams", data: {tooltip: true} %>
+      </div>
+      <div class="small-9 columns">
+        <%= f.text_field :carbohydrates %>
+      </div>
+    </div>
+    <div class="row collapse">
+      <div class="small-3 columns">
+        <%= f.label :sugars, class: "right inline", title: "Sugars content in grams", data: {tooltip: true} %>
+      </div>
+      <div class="small-9 columns">
+        <%= f.text_field :sugars %>
+      </div>
+    </div>
+    <div class="row collapse">
+      <div class="small-3 columns">
+        <%= f.label :saturated_fats, class: "right inline", title: "Saturated fats content in grams", data: {tooltip: true} %>
+      </div>
+      <div class="small-9 columns">
+        <%= f.text_field :saturated_fats %>
+      </div>
+    </div>
+    <div class="row collapse">
+      <div class="small-3 columns">
+        <%= f.label :unsaturated_fats, class: "right inline", title: "Unsaturated fats content in grams", data: {tooltip: true} %>
+      </div>
+      <div class="small-9 columns">
+        <%= f.text_field :unsaturated_fats %>
+      </div>
+    </div>
+    <div class="row collapse">
+      <div class="small-3 columns">
+        <%= f.label :cholesterol, class: "right inline", title: "Cholesterol content in grams", data: {tooltip: true} %>
+      </div>
+      <div class="small-9 columns">
+        <%= f.text_field :cholesterol %>
+      </div>
+    </div>
+    <div class="row collapse">
+      <div class="small-3 columns">
+        <%= f.label :fibre, class: "right inline", title: "Fibre content in grams", data: {tooltip: true} %>
+      </div>
+      <div class="small-9 columns">
+        <%= f.text_field :fibre %>
+      </div>
+    </div>
+    <div class="row collapse">
+      <div class="small-9 small-offset-3 columns">
+        <%= f.submit %>
+      </div>
+    </div>
 <% end %>

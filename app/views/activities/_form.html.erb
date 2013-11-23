@@ -1,29 +1,44 @@
 <%= form_for(@activity) do |f| %>
-  <% if @activity.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@activity.errors.count, "error") %> prohibited this activity from being saved:</h2>
+    <% if @activity.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@activity.errors.count, "error") %> prohibited this activity from being saved:</h2>
 
-      <ul>
-      <% @activity.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+          <ul>
+            <% @activity.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="row collapse">
+      <div class="small-3 columns">
+        <%= f.label :name, class: "right inline", title: "Type of activity", data: {tooltip: true} %>
+      </div>
+      <div class="small-9 columns">
+        <%= f.text_field :name %>
+      </div>
     </div>
-  <% end %>
+    <div class="row collapse">
+      <div class="small-3 columns">
+        <%= f.label :weight, class: "right inline", title: "Please enter weight in kilograms", data: {tooltip: true} %>
+      </div>
+      <div class="small-9 columns">
+        <%= f.number_field :weight %>
+      </div>
+    </div>
+    <div class="row collapse">
+      <div class="small-3 columns">
+        <%= f.label :calories_burned, class: "right inline", title: "Approx number of calories burned in an hour", data: {tooltip: true} %>
+      </div>
+      <div class="small-9 columns">
+        <%= f.number_field :calories_burned %>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :weight_in_kg %><br />
-    <%= f.number_field :weight %>
-  </div>
-  <div class="field">
-    <%= f.label :calories_burned %><br />
-    <%= f.number_field :calories_burned %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="row collapse">
+      <div class="small-9 small-offset-3 columns">
+        <%= f.submit %>
+      </div>
+    </div>
 <% end %>
