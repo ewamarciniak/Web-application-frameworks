@@ -1,4 +1,7 @@
 DietApp::Application.routes.draw do
+  resources :motivational_images
+
+
   resources :recipes
 
 

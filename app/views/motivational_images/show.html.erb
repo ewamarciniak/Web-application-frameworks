@@ -1,0 +1,13 @@
+<h1>Image</h1>
+<p id="notice"><%= notice %></p>
+
+<p>
+<td><%= image_tag @motivational_image.picture.url(:large) %></td>
+</p>
+
+<p>
+  <%= @motivational_image.caption %>
+</p>
+
+<%= link_to 'Edit', edit_motivational_image_path(@motivational_image), class: "button radius"  %>
+<%= link_to 'Back', motivational_images_path, class: "button radius"  %>

@@ -1,0 +1,38 @@
+<%= form_for(@motivational_image) do |f| %>
+    <% if @motivational_image.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@motivational_image.errors.count, "error") %> prohibited this motivational_image from being
+            saved:</h2>
+
+          <ul>
+            <% @motivational_image.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+    <div class="row collapse">
+      <div class="small-3 columns">
+        <%= f.label :image_upload, class: "right inline", title: "Image of the dish up to 500kb, jpg only", data: {tooltip: true} %>
+      </div>
+      <div class="small-9 columns">
+        <%= f.file_field :picture %>
+      </div>
+    </div>
+    <div class="row collapse">
+      <div class="small-3 columns">
+        <%= f.label :caption, class: "right inline", title: "Image of the dish up to 500kb, jpg only", data: {tooltip: true} %>
+      </div>
+      <div class="small-9 columns">
+        <%= f.text_field :caption %>
+      </div>
+    </div>
+    <div class="field">
+      <%= f.hidden_field :user_id, :value => current_user.id %>
+    </div>
+    <div class="row collapse">
+      <div class="small-9 small-offset-3 columns">
+        <%= f.submit %>
+      </div>
+    </div>
+<% end %>

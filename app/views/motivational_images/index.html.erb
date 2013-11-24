@@ -1,0 +1,20 @@
+<h1>Motivational images</h1>
+
+<% @motivational_images.each do |motivational_image| %>
+    <table>
+      <tr>
+        <td colspan="4"><%= image_tag motivational_image.picture.url(:medium) %></td>
+      </tr>
+      <tr>
+        <td colspan="4"><%= motivational_image.caption %></td>
+      </tr>
+      <tr>
+        <td><%= link_to 'Edit caption/Upload different image', edit_motivational_image_path(motivational_image) %></td>
+        <td><%= link_to 'Remove image', motivational_image, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+      </tr>
+    </table>
+<% end %>
+
+<br/>
+
+<%= link_to 'Add an image', new_motivational_image_path, class: "button radius" %>
