@@ -12,20 +12,22 @@
     <th></th>
   </tr>
 
-<% @recipes.each do |recipe| %>
-  <tr>
-    <td><%= recipe.title %></td>
-    <td><%= image_tag recipe.picture.url(:medium) %></td>
-    <td><%= recipe.ready_in_time %> minutes</td>
-    <td><%= recipe.calories_per_portion %></td>
-    <td><%= recipe.ingredients.map(&:name).join(", ") %></td>
-    <td><%= link_to 'Show', recipe %></td>
-    <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
-    <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
+  <% @recipes.each do |recipe| %>
+      <tr>
+        <td><%= recipe.title %></td>
+        <td><%= image_tag recipe.picture.url(:medium) %></td>
+        <td><%= recipe.ready_in_time %> minutes</td>
+        <td><%= recipe.calories_per_portion %></td>
+        <td><%= recipe.ingredients.map(&:name).join(", ") %></td>
+        <% if current_user && current_user.admin? %>
+            <td><%= link_to 'Show', recipe %></td>
+            <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
+            <td><%= link_to 'Destroy', recipe, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+        <% end %>
+      </tr>
+  <% end %>
 </table>
 
-<br />
+<br/>
 
 <%= link_to 'New Recipe', new_recipe_path, class: "button radius" %>

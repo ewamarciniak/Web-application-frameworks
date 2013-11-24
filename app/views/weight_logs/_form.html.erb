@@ -1,17 +1,14 @@
 <%= form_for(@weight_log) do |f| %>
-  <% if @weight_log.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@weight_log.errors.count, "error") %> prohibited this weight_log from being saved:</h2>
-
-      <ul>
-      <% @weight_log.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-
+    <% if @weight_log.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@weight_log.errors.count, "error") %> prohibited this weight_log from being saved:</h2>
+          <ul>
+            <% @weight_log.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
     <div class="row collapse">
       <div class="small-3 columns">
         <%= f.label :weight, class: "right inline", title: "Weight in kilograms", data: {tooltip: true} %>
@@ -25,15 +22,12 @@
         <%= f.label :date_of_measurement, class: "right inline", title: "Select the date of the weight measurement", data: {tooltip: true} %>
       </div>
       <div class="small-9 columns">
-        <%= f.date_select :measured_on %>
+        <%= f.text_field :measured_on %>
       </div>
     </div>
-
-
-
-  <div>
-    <%= f.hidden_field :user_id, :value => current_user.id %>
-  </div>
+    <div>
+      <%= f.hidden_field :user_id, :value => current_user.id %>
+    </div>
     <div class="row collapse">
       <div class="small-9 small-offset-3 columns">
         <%= f.submit %>

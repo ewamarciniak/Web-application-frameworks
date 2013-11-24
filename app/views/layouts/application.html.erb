@@ -29,28 +29,45 @@
 <body>
 <nav class="top-bar ">
   <div>
-  <ul class="title-area">
-    <li class="name">
-      <h1><%= link_to "Diet Planner", root_path %></h1>
-    </li>
-  </ul>
-  <section class="top-bar-section">
-    <ul class="right">
-      <li><a href="/home">Home</a></li>
-      <li><a href="/about">About us</a></li>
-      <li><a href="/contact">Contact us</a></li>
-      <li><a href="/diet_planner">Diet Planner</a></li>
-      <li><a href="/recipes">Healthy Recipes</a></li>
-      <li><a href="/news">Healthy living News</a></li>
-      <li><%= link_to 'Login', new_user_session_path %></li>
-      <li><%= link_to 'Logout', destroy_user_session_path, :method => :delete %></li>
+    <ul class="title-area">
+      <li class="name">
+        <h1><%= link_to "Diet Planner", root_path %></h1>
+      </li>
     </ul>
+    <section class="top-bar-section">
+      <ul class="right">
+        <li><a href="/home">Home</a></li>
+        <li><a href="/about">About us</a></li>
+        <li><a href="/contact">Contact us</a></li>
+        <li><a href="/diet_planner">Diet Planner</a></li>
+        <li><a href="/recipes">Healthy Recipes</a></li>
+        <li><a href="/news">Healthy living News</a></li>
+        <% if current_user %>
+            <li><%= link_to 'Logout', destroy_user_session_path, :method => :delete %></li>
+        <% else %>
+            <li><%= link_to 'Register',  new_registration_path(resource_name) %></li>
+            <li><%= link_to 'Login', new_user_session_path %></li>
+        <% end %>
+      </ul>
     </section>
   </div>
 </nav>
-<div class="large-9 small-centered columns">
 
-  <%= yield %>
+<div class="large-10 small-centered columns">
+
+  <% if current_user %>
+      <div class="large-2 columns sidebar">
+        <%= render "site/side_bar" %>
+      </div>
+      <div class="large-10 columns">
+        <%= yield %>
+      </div>
+
+
+  <% else %>
+      <%= yield %>
+  <% end %>
+
 </div>
 
 <%= javascript_include_tag "application" %>

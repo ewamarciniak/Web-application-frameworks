@@ -1,3 +1,4 @@
+<h1>Weight log</h1>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -9,12 +10,6 @@
   <b>Measured on:</b>
   <%= @weight_log.measured_on %>
 </p>
-
-<p>
-  <b>User:</b>
-  <%= @weight_log.user %>
-</p>
-
 
 <%= link_to 'Edit', edit_weight_log_path(@weight_log) %> |
 <%= link_to 'Back', weight_logs_path %>

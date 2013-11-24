@@ -1,0 +1,18 @@
+<ul class="side-nav">
+  <li><a href="#">Dashboard</a></li>
+  <li><a href="#">Progress Stats</a></li>
+  <li class="active"><a href="/exercise_logs">Exercise logs</a></li>
+  <li><a href="/food_intake_logs">Food Intake logs</a></li>
+  <li><a href="/weight_logs">Weight logs</a></li>
+  <li><a href="#">Nutritional advise</a></li>
+  <% if current_user && current_user.admin? %>
+      <li class="divider"></li>
+      <li><a href="/recipes">Recipes</a></li>
+      <li><a href="/ingredients">Ingredients</a></li>
+      <li class="divider"></li>
+      <li><a href="/foods">Foods</a></li>
+      <li><a href="/food_categories">Food Categories</a></li>
+      <li class="divider"></li>
+      <li><a href="/activities">Activities</a></li>
+  <% end %>
+</ul>

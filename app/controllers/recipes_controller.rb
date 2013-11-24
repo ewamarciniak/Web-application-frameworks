@@ -1,5 +1,4 @@
 class RecipesController < ApplicationController
-  before_filter :ensure_admin
   # GET /recipes
   # GET /recipes.json
   def index

@@ -3,7 +3,7 @@ class ExerciseLogsController < ApplicationController
   # GET /exercise_logs
   # GET /exercise_logs.json
   def index
-    @exercise_logs = ExerciseLog.all
+    @exercise_logs = current_user.exercise_logs.all
 
     respond_to do |format|
       format.html # index.html.erb
