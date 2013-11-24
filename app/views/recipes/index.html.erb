@@ -3,6 +3,7 @@
 <table>
   <tr>
     <th>Title</th>
+    <th>Image</th>
     <th>Ready in</th>
     <th>Calories per portion</th>
     <th>Ingredients</th>
@@ -14,6 +15,7 @@
 <% @recipes.each do |recipe| %>
   <tr>
     <td><%= recipe.title %></td>
+    <td><%= image_tag recipe.picture.url(:medium) %></td>
     <td><%= recipe.ready_in_time %> minutes</td>
     <td><%= recipe.calories_per_portion %></td>
     <td><%= recipe.ingredients.map(&:name).join(", ") %></td>

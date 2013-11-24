@@ -21,7 +21,15 @@
     </div>
     <div class="row collapse">
       <div class="small-3 columns">
-        <%= f.label :directions, class: "right inline", title: "Instructions on how to prepare the dish", data: {tooltip: true} %>
+        <%= f.label :image_upload, class: "right inline", title: "Image of the dish up to 500kb, jpg only", data: {tooltip: true} %>
+      </div>
+      <div class="small-9 columns">
+        <%= f.file_field :picture %>
+      </div>
+    </div>
+    <div class="row collapse">
+      <div class="small-3 columns">
+        <%= f.label :cooking_directions, class: "right inline", title: "Instructions on how to prepare the dish", data: {tooltip: true} %>
       </div>
       <div class="small-9 columns">
         <%= f.text_area :directions %>

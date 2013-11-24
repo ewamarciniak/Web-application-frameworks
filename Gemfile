@@ -25,6 +25,9 @@ end
 gem 'jquery-rails'
 gem 'debugger'
 gem 'jquery-ui-rails'
+gem "paperclip", "~> 3.4.0"
+#required by paperclip
+gem "aws-sdk", "~> 1.7.1"
 
 
 # To use ActiveModel has_secure_password

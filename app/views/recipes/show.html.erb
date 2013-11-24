@@ -1,7 +1,8 @@
 <h1><%= @recipe.title %></h1>
 
 <p id="notice"><%= notice %></p>
-
+<p>
+  <%= image_tag @recipe.picture.url(:large) %>
 <p>
   <b>Cooking time:</b>
   <%= @recipe.cooking_time %> min
