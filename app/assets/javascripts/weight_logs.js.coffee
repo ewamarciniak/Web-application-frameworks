@@ -4,3 +4,4 @@
 jQuery ->
 $('#weight_log_measured_on').datepicker
   dateFormat: 'yy-mm-dd'
+
