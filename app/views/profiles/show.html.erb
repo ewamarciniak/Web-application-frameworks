@@ -1,0 +1,31 @@
+<h1>Profile</h1>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Gender:</b>
+  <%= @profile.gender %>
+</p>
+
+<p>
+  <b>Pregnant:</b>
+  <%= @profile.pregnant %>
+</p>
+
+<p>
+  <b>Brestfeeding:</b>
+  <%= @profile.brestfeeding %>
+</p>
+
+<p>
+  <b>Height:</b>
+  <%= @profile.height %>
+</p>
+
+<p>
+  <b>Dob:</b>
+  <%= @profile.dob %>
+</p>
+
+
+<%= link_to 'Edit', edit_profile_path(@profile), class: "button radius"  %>
+<%= link_to 'Back', profiles_path, class: "button radius"  %>

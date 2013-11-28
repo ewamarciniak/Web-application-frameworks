@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  gender: MyString
+  pregnant: false
+  brestfeeding: false
+  height: 1
+  dob: 2013-11-27
+
+two:
+  gender: MyString
+  pregnant: false
+  brestfeeding: false
+  height: 1
+  dob: 2013-11-27

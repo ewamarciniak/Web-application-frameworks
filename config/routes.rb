@@ -25,6 +25,7 @@ DietApp::Application.routes.draw do
 
   resources :weight_logs
 
+  resources :profiles
 
   devise_for :users
 

@@ -20,4 +20,5 @@ class User < ActiveRecord::Base
   has_many :food_intake_logs
   has_many :exercise_logs
   has_many :motivational_images
+  has_one :profile
 end

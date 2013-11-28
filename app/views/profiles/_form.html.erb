@@ -1,0 +1,68 @@
+<%= form_for(@profile) do |f| %>
+    <% if @profile.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+          <ul>
+            <% @profile.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+    <div class="row collapse">
+      <div class="small-3 columns">
+        <%= f.label :date_of_birth, class: "right inline", title: "Choose your gender", data: {tooltip: true} %>
+      </div>
+      <div class="small-9 columns in_one_line left">
+        <%= f.date_select :dob, {:include_blank => true, :start_year => 1920} %>
+      </div>
+    </div>
+
+    <div class="row collapse">
+      <div class="small-3 columns">
+        <%= f.label :gender, class: "right inline", title: "Choose your gender", data: {tooltip: true} %>
+      </div>
+      <div class="small-9 columns in_one_line left">
+        <%= f.label :male, class: "collapse" %>
+        <%= f.radio_button :gender, 'male', {:class => "gender"} %>
+        <%= f.label :female, class: "collapse" %>
+        <%= f.radio_button :gender, 'female', {:class => "gender"} %>
+      </div>
+    </div>
+    <div id="woman">
+      <div class="row collapse">
+        <div class="small-3 columns">
+          <%= f.label :pregnant, class: "right inline", title: "Choose your gender", data: {tooltip: true} %>
+        </div>
+        <div class="small-9 columns">
+          <%= f.check_box :pregnant %>
+        </div>
+      </div>
+
+      <div class="row collapse">
+        <div class="small-3 columns">
+          <%= f.label :brestfeeding, class: "right inline", title: "Choose your gender", data: {tooltip: true} %>
+        </div>
+        <div class="small-9 columns">
+          <%= f.check_box :brestfeeding %>
+        </div>
+      </div>
+    </div>
+    <div class="row collapse">
+      <div class="small-3 columns">
+        <%= f.label :height, class: "right inline", title: "Choose your gender", data: {tooltip: true} %>
+      </div>
+      <div class="small-9 columns">
+        <%= f.number_field :height, :placeholder => "Height in centimeters" %>
+      </div>
+    </div>
+    <div>
+      <%= f.hidden_field :user_id, :value => current_user.id %>
+    </div>
+
+    <div class="row collapse">
+      <div class="small-9 small-offset-3 columns">
+        <%= f.submit %>
+      </div>
+    </div>
+<% end %>

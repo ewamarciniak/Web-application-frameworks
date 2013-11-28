@@ -5,6 +5,7 @@ h1 {
   margin-top: 1.2em;
 }
 
-div.date input { width: auto; }
+div.in_one_line { display: flex;
+  width: 280px; }
 table td.bold { font-weight: bold;}
 div.sidebar {padding-top: 100px;}
