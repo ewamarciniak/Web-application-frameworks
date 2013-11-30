@@ -9,3 +9,8 @@ jQuery ->
     xkey: 'measured_on'
     ykeys: ['weight']
     labels: ['Weight']
+    smooth: true
+    postUnits: 'kg'
+    goals: [$('#min').text(), $('#max').text()]
+    goalStrokeWidth: 1
+    goalLineColors: ['#FF0000' ]

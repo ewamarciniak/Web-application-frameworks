@@ -3,7 +3,7 @@ class ProfilesController < ApplicationController
   # GET /profiles
   # GET /profiles.json
   def index
-    @profiles = current_user.profiles.all
+    @profile = current_user.profile
 
     respond_to do |format|
       format.html # index.html.erb

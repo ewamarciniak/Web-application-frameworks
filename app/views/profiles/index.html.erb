@@ -1,4 +1,4 @@
-<h1>Listing profiles</h1>
+<h1>Profiles</h1>
 
 <table>
   <tr>
@@ -12,20 +12,21 @@
     <th></th>
   </tr>
 
-<% @profiles.each do |profile| %>
+
   <tr>
-    <td><%= profile.gender %></td>
-    <td><%= profile.pregnant %></td>
-    <td><%= profile.brestfeeding %></td>
-    <td><%= profile.height %></td>
-    <td><%= profile.dob %></td>
-    <td><%= link_to 'Show', profile %></td>
-    <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
-    <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= @profile.gender %></td>
+    <td><%= @profile.pregnant %></td>
+    <td><%= @profile.brestfeeding %></td>
+    <td><%= @profile.height %></td>
+    <td><%= @profile.dob %></td>
+    <td><%= link_to 'Show', @profile %></td>
+    <td><%= link_to 'Edit', edit_profile_path(@profile) %></td>
+    <td><%= link_to 'Destroy', @profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
-<% end %>
+
 </table>
 
 <br />
-
+ <% unless @profile %>
 <%= link_to 'New Profile', new_profile_path %>
+<% end %>
