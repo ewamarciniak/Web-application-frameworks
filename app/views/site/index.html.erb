@@ -1,4 +1,15 @@
 <h1>Site#index</h1>
+<div id="videoModal" class="reveal-modal large" data-reveal style="display: none; opacity: 1;">
+  <h2>More about BMI</h2>
+  <iframe src="//player.vimeo.com/video/70104307" width="100%" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  <p><a href="http://vimeo.com/70104307">BMI Calculator For Women And Men</a> from
+    <a href="http://vimeo.com/kidandparent">Kid And Parent</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+  <a class="close-reveal-modal">×</a>
+</div>
+
+<p><a href="#" data-reveal-id="videoModal" class="radius button">Watch BMI video</a></p>
+
+
 <% if current_user && current_user.profile %>
     <% if current_user.profile.height.nil? %>
         <div>Please submit your height information
@@ -24,3 +35,5 @@
       <%= content_tag :div, "", id: "weight_logs_chart", data: {weight_logs: @weight_logs} %>
     </div>
 <% end %>
+
+
