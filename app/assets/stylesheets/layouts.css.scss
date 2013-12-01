@@ -9,3 +9,18 @@ div.in_one_line { display: flex;
   width: 280px; }
 table td.bold { font-weight: bold;}
 div.sidebar {padding-top: 100px;}
+.pw-very-weak, .pw-very-weak .label {
+   background-color: red;
+ }
+.pw-weak, .pw-weak .label {
+  background-color: #ff7a24;
+}
+.pw-mediocre, .pw-mediocre .label {
+  background-color: #ffc843;
+}
+.pw-strong, .pw-strong .label {
+  background-color: #d2ff29;
+}
+.pw-very-strong, .pw-very-strong .label {
+  background-color: #47ff2d;
+}

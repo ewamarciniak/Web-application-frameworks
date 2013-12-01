@@ -1,5 +1,26 @@
 <h1>Site#index</h1>
-<div>Healthy weight based on your height through BMI calculation is between <strong id="min"> <%= min_bmi_normal %></strong>  and  <strong id="max"><%= max_bmi_normal %></strong></div>
-<div id="myfirstchart" style="height: 250px;">
-<%= content_tag :div, "", id: "weight_logs_chart", data: {weight_logs: @weight_logs, } %>
-</div>
+<% if current_user && current_user.profile %>
+    <% if current_user.profile.height.nil? %>
+        <div>Please submit your height information
+          <% if current_user.profile %>
+              <%= link_to 'here', edit_profile_path(current_user.profile) %>
+          <% else %>
+              <%= link_to 'here', new_exercise_log_path %>
+          <% end %>
+          to calculate your BMI based healthy weight range.
+        </div>
+    <% else %>
+        <div>Healthy weight based on your height through BMI calculation is between
+          <strong id="min"> <%= min_bmi_normal %></strong><strong> kg</strong> and
+          <strong id="max"><%= max_bmi_normal %></strong> <strong>kg</strong>.
+        </div>
+        <% if current_user.weight_logs.last.weight > min_bmi_normal && current_user.weight_logs.last.weight < max_bmi_normal %>
+            <div>You weight is currently <strong>within the healthy range.</strong></div>
+        <% else %>
+            <div>You weight is currently <strong>outside the healthy range.</strong></div>
+        <% end %>
+    <% end %>
+    <div id="myfirstchart" style="height: 250px;">
+      <%= content_tag :div, "", id: "weight_logs_chart", data: {weight_logs: @weight_logs} %>
+    </div>
+<% end %>

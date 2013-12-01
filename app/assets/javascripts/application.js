@@ -15,6 +15,7 @@
 //= require jquery.ui.datepicker
 //= require raphael
 //= require morris
+//= require pwstrength
 //= require foundation
 //= require_tree .
 
