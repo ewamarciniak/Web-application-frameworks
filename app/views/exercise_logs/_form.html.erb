@@ -37,7 +37,7 @@
         <%= f.label :activity_type, class: "right inline" %>
       </div>
       <div class="small-9 columns">
-        <%= collection_select(:exercise_log, :activity_id, Activity.all, :id, :name) %>
+        <%= collection_select(:exercise_log, :activity_id, Activity.all, :id, :name, {include_blank: true, :data => { :placeholder => "Select activity"}}, { :class => "chosen-select", :tabindex =>"-1",  :style => "width:350px;", } ) %>
       </div>
     </div>
     <div class="row collapse">

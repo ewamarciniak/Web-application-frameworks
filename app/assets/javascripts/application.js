@@ -16,6 +16,7 @@
 //= require raphael
 //= require morris
 //= require pwstrength
+//= require chosen.jquery
 //= require foundation
 //= require_tree .
 
