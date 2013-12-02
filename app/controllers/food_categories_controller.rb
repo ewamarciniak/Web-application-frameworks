@@ -26,11 +26,6 @@ class FoodCategoriesController < ApplicationController
   # GET /food_categories/new.json
   def new
     @food_category = FoodCategory.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @food_category }
-    end
   end
 
   # GET /food_categories/1/edit
@@ -45,10 +40,11 @@ class FoodCategoriesController < ApplicationController
 
     respond_to do |format|
       if @food_category.save
-        format.html { redirect_to @food_category, notice: 'Food category was successfully created.' }
+        format.html { redirect_to food_categories_url}
         format.json { render json: @food_category, status: :created, location: @food_category }
+        format.js
       else
-        format.html { render action: "new" }
+        format.html { redirect_to food_categories_url}
         format.json { render json: @food_category.errors, status: :unprocessable_entity }
       end
     end
@@ -79,6 +75,7 @@ class FoodCategoriesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to food_categories_url }
       format.json { head :no_content }
+      format.js
     end
   end
 end
