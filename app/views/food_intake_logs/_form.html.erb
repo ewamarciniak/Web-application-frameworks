@@ -26,8 +26,8 @@
       <div class="small-3 columns">
         <%= f.label :intake_time, class: "right inline", title: "Time of the meal", data: {tooltip: true} %>
       </div>
-      <div class="small-9 columns">
-        <%= f.time_select :intake_time %>
+      <div class="small-9 columns in_one_line left" style="width:100px;">
+        <%= f.time_select :intake_time%>
       </div>
     </div>
     <div class="row collapse">
@@ -35,7 +35,7 @@
         <%= f.label :food, class: "right inline", title: "Type of food", data: {tooltip: true} %>
       </div>
       <div class="small-9 columns">
-        <%= f.grouped_collection_select :food_id, FoodCategory.order(:name), :foods, :name, :id, :name, include_blank: true %>
+        <%= f.grouped_collection_select(:food_id, FoodCategory.order(:name), :foods, :name, :id, :name, {include_blank: true, :data => { :placeholder => "Select food type"}}, { :class => "chosen-select", :tabindex =>"-1",  :style => "width:350px;", })%>
       </div>
     </div>
     <div class="row collapse">

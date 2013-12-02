@@ -92,17 +92,6 @@
       </div>
     </div>
 
-
-    <div class="row collapse">
-      <div class="small-3 columns">
-        <%= f.label :activity_type, class: "right inline" %>
-      </div>
-      <div class="small-9 columns">
-        <%= collection_select(:exercise_log, :activity_id, Activity.all, :id, :name) %>
-      </div>
-    </div>
-
-
     <div class="row collapse">
       <div class="small-9 small-offset-3 columns">
         <%= f.submit %>
