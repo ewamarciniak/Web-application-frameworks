@@ -2,10 +2,13 @@
 
 <table>
   <tr>
-    <th>Title</th>
+  <tr>
+    <th><%= sortable "title" %></th>
     <th>Image</th>
+    <th><%= sortable "preparation_time"%></th>
+    <th><%= sortable "cooking_time"%> </th>
     <th>Ready in</th>
-    <th>Calories per portion</th>
+    <th><%= sortable "calories_per_portion" %></th>
     <th>Ingredients</th>
     <th></th>
     <th></th>
@@ -16,6 +19,8 @@
       <tr>
         <td><%= recipe.title %></td>
         <td><%= image_tag recipe.picture.url(:medium) %></td>
+        <td><%= recipe.preparation_time %> minutes</td>
+        <td><%= recipe.cooking_time %> minutes</td>
         <td><%= recipe.ready_in_time %> minutes</td>
         <td><%= recipe.calories_per_portion %></td>
         <td><%= recipe.ingredients.map(&:name).join(", ") %></td>
@@ -29,5 +34,6 @@
 </table>
 
 <br/>
-
-<%= link_to 'New Recipe', new_recipe_path, class: "button radius" %>
+<% if current_user && current_user.admin? %>
+    <%= link_to 'New Recipe', new_recipe_path, class: "small button radius" %>
+<% end %>

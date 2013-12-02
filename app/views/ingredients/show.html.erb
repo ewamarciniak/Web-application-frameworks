@@ -1,5 +1,6 @@
 <h1>Ingredient</h1>
 <p id="notice"><%= notice %></p>
+<%= link_to 'Back', ingredients_path, class: "small button radius"  %>
 
 <p>
   <b>Name:</b>
@@ -7,5 +8,4 @@
 </p>
 
 
-<%= link_to 'Edit', edit_ingredient_path(@ingredient), class: "button radius"  %>
-<%= link_to 'Back', ingredients_path, class: "button radius"  %>
+<%= link_to 'Edit', edit_ingredient_path(@ingredient), class: "small button radius"  %>

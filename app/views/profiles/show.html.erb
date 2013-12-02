@@ -1,5 +1,6 @@
 <h1>Profile</h1>
 <p id="notice"><%= notice %></p>
+<%= link_to 'Back', profiles_path, class: "small button radius"  %>
 
 <p>
   <b>Gender:</b>
@@ -27,5 +28,4 @@
 </p>
 
 
-<%= link_to 'Edit', edit_profile_path(@profile), class: "button radius"  %>
-<%= link_to 'Back', profiles_path, class: "button radius"  %>
+<%= link_to 'Edit', edit_profile_path(@profile), class: "small button radius"  %>

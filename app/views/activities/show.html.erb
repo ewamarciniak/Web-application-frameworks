@@ -1,5 +1,6 @@
 <h1>Activity</h1>
 <p id="notice"><%= notice %></p>
+<%= link_to 'Back', activities_path, class: "small button radius"  %>
 
 <p>
   <b>Name:</b>
@@ -17,5 +18,4 @@
 </p>
 
 
-<%= link_to 'Edit', edit_activity_path(@activity) %> |
-<%= link_to 'Back', activities_path %>
+<%= link_to 'Edit', edit_activity_path(@activity), class: "small button radius"  %>
