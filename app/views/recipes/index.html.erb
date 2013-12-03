@@ -1,18 +1,18 @@
 <h1 xmlns="http://www.w3.org/1999/html">Healthy recipes</h1>
 
-  <%= form_tag recipes_path, :method => 'get', :id => "recipes_search" do %>
+<%= form_tag recipes_path, :method => 'get', :id => "recipes_search" do %>
     <div class="row collapse">
 
-    <div class="small-3 columns ">
+      <div class="small-3 columns ">
         <%= text_field_tag :search, params[:search], :placeholder => "search by title" %>
       </div>
       <div class="small-9 columns">
         <%= submit_tag "Search", :title => nil %>
       </div>
     </div>
-      <div id="recipes"><%= render 'recipes' %></div>
-  <% end %>
-  <br/> <br/>
+    <div id="recipes"><%= render 'recipes' %></div>
+<% end %>
+<br/> <br/>
 
 <br/>
 <% if current_user && current_user.admin? %>
