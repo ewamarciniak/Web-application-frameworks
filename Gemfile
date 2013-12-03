@@ -29,6 +29,7 @@ gem "paperclip", "~> 3.4.0"
 #required by paperclip
 gem "aws-sdk", "~> 1.7.1"
 gem 'will_paginate'
+gem 'nutritious'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
