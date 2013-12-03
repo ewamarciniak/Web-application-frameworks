@@ -1,37 +1,18 @@
 <h1 xmlns="http://www.w3.org/1999/html">Healthy recipes</h1>
 
-<table>
-  <tr>
-  <tr>
-    <th><%= sortable "title" %></th>
-    <th>Image</th>
-    <th><%= sortable "preparation_time"%></th>
-    <th><%= sortable "cooking_time"%> </th>
-    <th>Ready in</th>
-    <th><%= sortable "calories_per_portion" %></th>
-    <th>Ingredients</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+  <%= form_tag recipes_path, :method => 'get', :id => "recipes_search" do %>
+    <div class="row collapse">
 
-  <% @recipes.each do |recipe| %>
-      <tr>
-        <td><%= recipe.title %></td>
-        <td><%= image_tag recipe.picture.url(:medium) %></td>
-        <td><%= recipe.preparation_time %> minutes</td>
-        <td><%= recipe.cooking_time %> minutes</td>
-        <td><%= recipe.ready_in_time %> minutes</td>
-        <td><%= recipe.calories_per_portion %></td>
-        <td><%= recipe.ingredients.map(&:name).join(", ") %></td>
-        <% if current_user && current_user.admin? %>
-            <td><%= link_to 'Show', recipe %></td>
-            <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
-            <td><%= link_to 'Destroy', recipe, method: :delete, data: {confirm: 'Are you sure?'} %></td>
-        <% end %>
-      </tr>
+    <div class="small-3 columns ">
+        <%= text_field_tag :search, params[:search], :placeholder => "search by title" %>
+      </div>
+      <div class="small-9 columns">
+        <%= submit_tag "Search", :title => nil %>
+      </div>
+    </div>
+      <div id="recipes"><%= render 'recipes' %></div>
   <% end %>
-</table>
+  <br/> <br/>
 
 <br/>
 <% if current_user && current_user.admin? %>

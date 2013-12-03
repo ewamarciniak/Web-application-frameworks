@@ -1,0 +1,37 @@
+<%= hidden_field_tag :direction, params[:direction] %>
+<%= hidden_field_tag :sort, params[:sort] %>
+<table>
+  <tr>
+  <tr>
+    <th><%= sortable "title" %></th>
+    <th>Image</th>
+    <th><%= sortable "preparation_time" %></th>
+    <th><%= sortable "cooking_time" %> </th>
+    <th>Ready in</th>
+    <th><%= sortable "calories_per_portion" %></th>
+    <th>Ingredients</th>
+    <% if current_user && current_user.admin? %>
+        <th></th>
+        <th></th>
+        <th></th>
+    <% end %>
+  </tr>
+
+  <% for recipe in @recipes %>
+      <tr>
+        <td><%= recipe.title %></td>
+        <td><%= image_tag recipe.picture.url(:medium) %></td>
+        <td><%= recipe.preparation_time %> minutes</td>
+        <td><%= recipe.cooking_time %> minutes</td>
+        <td><%= recipe.ready_in_time %> minutes</td>
+        <td><%= recipe.calories_per_portion %></td>
+        <td><%= recipe.ingredients.map(&:name).join(", ") %></td>
+        <% if current_user && current_user.admin? %>
+            <td><%= link_to 'Show', recipe %></td>
+            <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
+            <td><%= link_to 'Destroy', recipe, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+        <% end %>
+      </tr>
+  <% end %>
+</table>
+<%= will_paginate @recipes %>

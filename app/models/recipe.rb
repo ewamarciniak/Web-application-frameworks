@@ -9,4 +9,12 @@ class Recipe < ActiveRecord::Base
   def ready_in_time
     return self.preparation_time + self.cooking_time
   end
+
+  def self.search(search)
+    if search
+      where('title LIKE ?', "%#{search}%")
+    else
+      scoped
+    end
+  end
 end

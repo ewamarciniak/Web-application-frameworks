@@ -3,12 +3,7 @@ class RecipesController < ApplicationController
   # GET /recipes
   # GET /recipes.json
   def index
-    @recipes = Recipe.order(sort_column + " " + sort_direction)
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @recipes }
-    end
+    @recipes = Recipe.search(params[:search]).order(sort_column + " " + sort_direction).paginate(:per_page => 5, :page => params[:page])
   end
 
   # GET /recipes/1

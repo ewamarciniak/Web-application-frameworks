@@ -48,10 +48,10 @@ GEM
       execjs
     coffee-script-source (1.6.3)
     columnize (0.3.6)
-    debugger (1.6.2)
+    debugger (1.6.3)
       columnize (>= 0.3.1)
       debugger-linecache (~> 1.2.0)
-      debugger-ruby_core_source (~> 1.2.3)
+      debugger-ruby_core_source (~> 1.2.4)
     debugger-linecache (1.2.0)
     debugger-ruby_core_source (1.2.4)
     devise (2.1.2)
@@ -77,7 +77,7 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    mime-types (1.25)
+    mime-types (1.25.1)
     mini_portile (0.5.2)
     multi_json (1.8.2)
     multi_xml (0.5.5)
@@ -133,12 +133,13 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.38)
-    uglifier (2.3.1)
+    uglifier (2.3.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     uuidtools (2.1.4)
     warden (1.2.3)
       rack (>= 1.0)
+    will_paginate (3.0.5)
     zurb-foundation (4.3.2)
       sass (>= 3.2.0)
 
@@ -157,4 +158,5 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   sqlite3
   uglifier (>= 1.0.3)
+  will_paginate
   zurb-foundation
