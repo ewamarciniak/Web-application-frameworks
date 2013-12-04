@@ -3,7 +3,6 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Weight</th>
     <th>Calories burned</th>
     <th></th>
     <th></th>
@@ -13,7 +12,6 @@
 <% @activities.each do |activity| %>
   <tr>
     <td><%= activity.name %></td>
-    <td><%= activity.weight %></td>
     <td><%= activity.calories_burned %></td>
     <td><%= link_to 'Show', activity %></td>
     <td><%= link_to 'Edit', edit_activity_path(activity) %></td>
