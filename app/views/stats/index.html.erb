@@ -1,0 +1,37 @@
+<h1>Progress statistics </h1>
+<div id="videoModal" class="reveal-modal large" data-reveal style="display: none; opacity: 1;">
+  <h2>More about BMI</h2>
+  <iframe src="//player.vimeo.com/video/70104307" width="100%" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  <p><a href="http://vimeo.com/70104307">BMI Calculator For Women And Men</a> from
+    <a href="http://vimeo.com/kidandparent">Kid And Parent</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+  <a class="close-reveal-modal">×</a>
+</div>
+
+<p><a href="#" data-reveal-id="videoModal" class="radius button">Watch BMI video</a></p>
+
+
+<% if current_user && current_user.profile %>
+    <% if current_user.profile.height.nil? %>
+        <div>Please submit your height information
+          <% if current_user.profile %>
+              <%= link_to 'here', edit_profile_path(current_user.profile) %>
+          <% else %>
+              <%= link_to 'here', new_exercise_log_path %>
+          <% end %>
+          to calculate your BMI based healthy weight range.
+        </div>
+    <% else %>
+        <div>Healthy weight based on your height through BMI calculation is between
+          <strong id="min"> <%= min_bmi_normal %></strong><strong> kg</strong> and
+          <strong id="max"><%= max_bmi_normal %></strong> <strong>kg</strong>.
+        </div>
+        <% if current_user.weight_logs.last.weight > min_bmi_normal && current_user.weight_logs.last.weight < max_bmi_normal %>
+            <div>You weight is currently <strong>within the healthy range.</strong></div>
+        <% else %>
+            <div>You weight is currently <strong>outside the healthy range.</strong></div>
+        <% end %>
+    <% end %>
+    <div id="myfirstchart" style="height: 250px;">
+      <%= content_tag :div, "", id: "weight_logs_chart", data: {weight_logs: @weight_logs} %>
+    </div>
+<% end %>

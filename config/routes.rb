@@ -1,4 +1,6 @@
 DietApp::Application.routes.draw do
+  get "stats/index"
+
   get "nutritional_advice/index"
 
   resources :motivational_images
