@@ -31,7 +31,7 @@
             <div>You weight is currently <strong>outside the healthy range.</strong></div>
         <% end %>
     <% end %>
-    <div id="myfirstchart" style="height: 250px;">
+    <div id="myfirstchart"class="graph-container">
       <%= content_tag :div, "", id: "weight_logs_chart", data: {weight_logs: @weight_logs} %>
     </div>
 <% end %>

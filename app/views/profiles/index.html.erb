@@ -3,8 +3,10 @@
 <table>
   <tr>
     <th>Gender</th>
-    <th>Pregnant</th>
-    <th>Brestfeeding</th>
+    <% if @profile.gender == "female" %>
+        <th>Pregnant</th>
+        <th>Brestfeeding</th>
+    <% end %>
     <th>Height</th>
     <th>Dob</th>
     <th></th>
@@ -15,18 +17,21 @@
 
   <tr>
     <td><%= @profile.gender %></td>
-    <td><%= @profile.pregnant %></td>
-    <td><%= @profile.brestfeeding %></td>
+
+    <% if @profile.gender == "female" %>
+        <td><%= @profile.pregnant %></td>
+        <td><%= @profile.brestfeeding %></td>
+    <% end %>
     <td><%= @profile.height %></td>
     <td><%= @profile.dob %></td>
     <td><%= link_to 'Show', @profile %></td>
     <td><%= link_to 'Edit', edit_profile_path(@profile) %></td>
-    <td><%= link_to 'Destroy', @profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Destroy', @profile, method: :delete, data: {confirm: 'Are you sure?'} %></td>
   </tr>
 
 </table>
 
-<br />
- <% unless @profile %>
-<%= link_to 'New Profile', new_profile_path %>
+<br/>
+<% unless @profile %>
+    <%= link_to 'New Profile', new_profile_path %>
 <% end %>

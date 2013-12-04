@@ -1,22 +1,23 @@
 <h1>Profile</h1>
 <p id="notice"><%= notice %></p>
-<%= link_to 'Back', profiles_path, class: "small button radius"  %>
+<%= link_to 'Back', profiles_path, class: "small button radius" %>
 
 <p>
   <b>Gender:</b>
   <%= @profile.gender %>
 </p>
 
-<p>
-  <b>Pregnant:</b>
-  <%= @profile.pregnant %>
-</p>
+<% if @profile.gender == "female" %>
+    <p>
+      <b>Pregnant:</b>
+      <%= @profile.pregnant %>
+    </p>
 
-<p>
-  <b>Brestfeeding:</b>
-  <%= @profile.brestfeeding %>
-</p>
-
+    <p>
+      <b>Brestfeeding:</b>
+      <%= @profile.brestfeeding %>
+    </p>
+<% end %>
 <p>
   <b>Height:</b>
   <%= @profile.height %>
@@ -28,4 +29,4 @@
 </p>
 
 
-<%= link_to 'Edit', edit_profile_path(@profile), class: "small button radius"  %>
+<%= link_to 'Edit', edit_profile_path(@profile), class: "small button radius" %>
