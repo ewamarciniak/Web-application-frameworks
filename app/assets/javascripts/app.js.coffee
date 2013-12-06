@@ -4,7 +4,12 @@ jQuery ->
   $('#user_password').pwstrength()
   $('#exercise_log_exercise_date, #food_intake_log_intake_date, #weight_log_measured_on' ).datepicker
     dateFormat: 'yy-mm-dd'
-  $(".gender").on('change', funct = -> $("#woman").toggle() );
+
+  if $("input#profile_gender_female").attr('checked')
+    $("div#woman").attr('style', 'display:block;')
+  $("input[name='profile[gender]']").on('change', ->
+    $("#woman").toggle()
+  )
 
   $(document).on("click","#recipes th a, #recipes .pagination a", ->
     $.getScript(this.href)
