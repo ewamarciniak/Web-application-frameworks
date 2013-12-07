@@ -1,1 +1,1 @@
-$('#edit_food_category_<%= @food_category.id %>').remove();
+$("a[href='/food_categories/<%= @food_category.id %>']").parents('tr').remove();

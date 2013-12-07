@@ -40,10 +40,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profiles_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/profiles_controller.rb">
+      <file leaf-file-name="app.js.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/app.js.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="41" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0">
+            <state line="13" column="13" selection-start="437" selection-end="437" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -58,10 +58,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_side.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/application/_side.html.erb">
+      <file leaf-file-name="create.js.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/food_categories/create.js.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="5" selection-start="886" selection-end="886" vertical-scroll-proportion="-12.423077">
+            <state line="2" column="27" selection-start="84" selection-end="84" vertical-scroll-proportion="0.06841046">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="destroy.js.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/food_categories/destroy.js.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -70,46 +79,16 @@
       <file leaf-file-name="_food_category.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/food_categories/_food_category.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="5" selection-start="290" selection-end="290" vertical-scroll-proportion="-3.2692308">
+            <state line="0" column="4" selection-start="4" selection-end="4" vertical-scroll-proportion="-0.0">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create.js.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/food_categories/create.js.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="22" selection-start="133" selection-end="133" vertical-scroll-proportion="-1.9615384">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_main_nav.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/application/_main_nav.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="6" selection-start="789" selection-end="789" vertical-scroll-proportion="-14.384615">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.html.erb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="12" selection-start="910" selection-end="910" vertical-scroll-proportion="0.3265766">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/site/index.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/views/food_categories/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="45" selection-start="869" selection-end="869" vertical-scroll-proportion="-8.115385">
+            <state line="12" column="6" selection-start="305" selection-end="305" vertical-scroll-proportion="-7.8461537">
               <folding />
             </state>
           </provider>
@@ -125,22 +104,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-        <option value="$PROJECT_DIR$/app/models/recipe.rb" />
         <option value="$PROJECT_DIR$/app/views/recipes/_recipes.html.erb" />
         <option value="$PROJECT_DIR$/app/views/profiles/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/app.js.coffee" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/foundation_and_overrides.scss" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/layouts.css.scss" />
         <option value="$PROJECT_DIR$/app/views/application/_side.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/food_categories/_food_category.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/food_categories/create.js.erb" />
         <option value="$PROJECT_DIR$/app/controllers/profiles_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/views/layouts/_main_nav.html.erb" />
         <option value="$PROJECT_DIR$/app/views/site/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/application/_main_nav.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/food_categories/_food_category.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/food_categories/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/food_categories/destroy.js.erb" />
+        <option value="$PROJECT_DIR$/app/views/food_categories/create.js.erb" />
       </list>
     </option>
   </component>
@@ -868,7 +847,7 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32668713" sideWeight="0.67077464" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32668713" sideWeight="0.67077464" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24693252" sideWeight="0.32570422" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24539877" sideWeight="0.6619718" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -939,27 +918,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/recipes/_recipes.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="27" selection-start="595" selection-end="595" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="4" selection-start="616" selection-end="616" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/profiles/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="38" selection-start="1397" selection-end="1397" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/layouts.css.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="681" column="1" selection-start="21581" selection-end="21581" vertical-scroll-proportion="0.0">
@@ -974,9 +932,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/food_categories/_food_category.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/foundation_and_overrides.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="5" selection-start="290" selection-end="290" vertical-scroll-proportion="-3.2692308">
+        <state line="371" column="25" selection-start="11000" selection-end="11000" vertical-scroll-proportion="0.15102041">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/food_categories/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/food_categories_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="8" selection-start="1139" selection-end="1148" vertical-scroll-proportion="-0.55531913">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/food_category.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/application/_main_nav.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="6" selection-start="789" selection-end="789" vertical-scroll-proportion="0.8423423">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/site/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="45" selection-start="869" selection-end="869" vertical-scroll-proportion="0.4547414">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="12" selection-start="910" selection-end="910" vertical-scroll-proportion="0.3125">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/profiles_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="41" selection-start="278" selection-end="278" vertical-scroll-proportion="0.3122449">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/app.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="13" selection-start="437" selection-end="437" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -990,28 +1007,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/app.js.coffee">
+    <entry file="file://$PROJECT_DIR$/app/views/food_categories/_food_category.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="437" selection-end="437" vertical-scroll-proportion="0.08723404">
+        <state line="0" column="4" selection-start="4" selection-end="4" vertical-scroll-proportion="-0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/foundation_and_overrides.scss">
+    <entry file="file://$PROJECT_DIR$/app/views/food_categories/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="371" column="25" selection-start="11000" selection-end="11000" vertical-scroll-proportion="0.15102041">
+        <state line="12" column="6" selection-start="305" selection-end="305" vertical-scroll-proportion="-7.8461537">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/profiles_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="41" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/food_categories/_form.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/food_categories/destroy.js.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
@@ -1020,32 +1030,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/food_categories/create.js.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="22" selection-start="133" selection-end="133" vertical-scroll-proportion="-1.9615384">
+        <state line="2" column="27" selection-start="84" selection-end="84" vertical-scroll-proportion="0.06841046">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/site/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="45" selection-start="869" selection-end="869" vertical-scroll-proportion="-8.115385">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/application/_main_nav.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="6" selection-start="789" selection-end="789" vertical-scroll-proportion="-14.384615">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="12" selection-start="910" selection-end="910" vertical-scroll-proportion="0.3265766">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
