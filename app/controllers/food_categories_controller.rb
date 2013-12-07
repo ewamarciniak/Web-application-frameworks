@@ -6,7 +6,7 @@ class FoodCategoriesController < ApplicationController
     @food_categories = FoodCategory.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html {render layout: false } # index.html.erb
       format.json { render json: @food_categories }
     end
   end
@@ -57,8 +57,9 @@ class FoodCategoriesController < ApplicationController
 
     respond_to do |format|
       if @food_category.update_attributes(params[:food_category])
-        format.html { redirect_to @food_category, notice: 'Food category was successfully updated.' }
+        format.html { redirect_to food_categories_url}
         format.json { head :no_content }
+        format.js
       else
         format.html { render action: "edit" }
         format.json { render json: @food_category.errors, status: :unprocessable_entity }
