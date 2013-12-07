@@ -24,6 +24,8 @@ jQuery ->
   $('#recipes_search input').keyup( ->
     $.get($("#recipes_search").attr("action"), $("#recipes_search").serialize(), null, 'script')
     false
+    console.log(this.action)
+
   )
 
   Morris.Line

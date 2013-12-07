@@ -1,2 +1,4 @@
 $('#new_food_category').remove();
 $('#new_link').show();
+$('table').append('<%= j render(@food_category) %>');
+//$('#edit_food_category_<%= @food_category.id %>').submitOnCheck();
