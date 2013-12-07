@@ -7,7 +7,7 @@ class ProfilesController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @profiles }
+      format.json { render json: @profile }
     end
   end
 

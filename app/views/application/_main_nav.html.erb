@@ -1,0 +1,23 @@
+<nav class="top-bar" id="nav">
+  <div>
+    <ul class="title-area">
+      <li class="name">
+        <h1><%= link_to "Diet Planner", root_path %></h1>
+      </li>
+    </ul>
+    <section class="top-bar-section">
+      <ul class="right">
+        <li><a href="/">Home</a></li>
+        <li><a href="/diet_planner">Diet Planner</a></li>
+        <li><a href="/recipes">Healthy Recipes</a></li>
+        <li><a href="/news">Healthy living News</a></li>
+        <% if current_user %>
+            <li><%= link_to 'Logout', destroy_user_session_path, :method => :delete %></li>
+        <% else %>
+            <li><%= link_to 'Register',  new_registration_path(:user) %></li>
+            <li><%= link_to 'Login', new_user_session_path %></li>
+        <% end %>
+      </ul>
+    </section>
+  </div>
+</nav>

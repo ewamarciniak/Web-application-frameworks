@@ -1,4 +1,35 @@
-<h1>Site#index</h1>
+<div class="pad">
+  <div class="row collapse">
+    <div class="small-6 columns">
+      <% if current_user %>
+          <h1>Welcome!</h1>
+          <%= image_tag("/assets/body.jpg", {:alt => "home image", :width => 25, :height => 25}) %>
+          <%= link_to 'Start using today', new_registration_path(:user), class: "large button radius" %>
+          <h2 lass="title red_coloured">Get lean, fabulous and healthy.</h2>
 
+          <p>Check out the menu to the left- you will find there all the tools necessary. For healthy recipes use the
+            top menu bar tab.</p>
 
+          <p> Enjoy the new and healthier You!</p>
+      <% else %>
+          <h2 lass="title red_coloured">Get lean, fabulous and healthy.</h2>
 
+          <p>Use our free diet tools to achieve your goals:</p>
+          <ul>
+            <li>Log exercise</li>
+            <li>Log what you eat</li>
+            <li>Log your weight measurements</li>
+          </ul>
+          <p>Stay healthy throughout the diet with our:</p>
+          <ul>
+            <li>Healthy recipes section</li>
+            <li>Nutritional advice based on your logs</li>
+          </ul>
+          <%= link_to 'Register today', new_registration_path(:user), class: "large button radius" %>
+      <% end %>
+    </div>
+    <div class="small-6 columns">
+      <%= image_tag("/assets/body.jpg", {:alt => "home image", :width => 400, :height => 524, :title => "Click here to return to Home"}) %>
+    </div>
+  </div>
+</div>
