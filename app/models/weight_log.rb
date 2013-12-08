@@ -3,7 +3,6 @@ class WeightLog < ActiveRecord::Base
   belongs_to :user
 
   validates :weight, numericality: {greater_than_or_equal_to: 20}
-  validates :weight, presence: true
-  validates :measured_on, presence: true
+  validates :weight, :measured_on, presence: true
 
 end

@@ -1,8 +1,7 @@
+
 <%= form_for(@exercise_log) do |f| %>
     <% if @exercise_log.errors.any? %>
         <div id="error_explanation">
-          <h2><%= pluralize(@exercise_log.errors.count, "error") %> prohibited this exercise_log from being saved:</h2>
-
           <ul>
             <% @exercise_log.errors.full_messages.each do |msg| %>
                 <li><%= msg %></li>
@@ -17,16 +16,16 @@
       </div>
       <div class="small-9 columns">
         <div class="date">
-          <%= f.text_field :exercise_date %>
+          <%= f.text_field :exercise_date, :placeholder => "click to select" %>
         </div>
       </div>
     </div>
     <div class="row collapse">
       <div class="small-3 columns">
-        <%= f.label :length_in_minutes, class: "right inline", title: "Type of activity", data: {tooltip: true} %>
+        <%= f.label :duration, class: "right inline", title: "Type of activity", data: { tooltip: true} %>
       </div>
       <div class="small-9 columns">
-        <%= f.number_field :length %>
+        <%= f.number_field :length, :placeholder => "in minutes" %>
       </div>
     </div>
     <div>

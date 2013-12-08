@@ -1,5 +1,5 @@
 <h1>Nutritional value</h1>
-<p id="notice"><%= notice %></p>
+<%= link_to 'Back', food_intake_logs_path, class: "small button radius"  %>
  <table>
 <tr>
   <td class="bold">Intake date:</td>
@@ -60,4 +60,3 @@
 </tr>
  </table>
 <%= link_to 'Edit', edit_food_intake_log_path(@food_intake_log), class: "small button radius"  %>|
-<%= link_to 'Back', food_intake_logs_path, class: "small button radius"  %>

@@ -4,6 +4,7 @@ class FoodIntakeLog < ActiveRecord::Base
 
   belongs_to :food
   belongs_to :user
+  validates :amount, :intake_date, :intake_time, :user_id, :food_id,  :presence => true
 
   def calculate_calories_intake
     return self.food.calories / 100.0 * self.amount

@@ -1,7 +1,6 @@
 <%= form_for(@profile) do |f| %>
     <% if @profile.errors.any? %>
         <div id="error_explanation">
-          <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
           <ul>
             <% @profile.errors.full_messages.each do |msg| %>
                 <li><%= msg %></li>
@@ -53,7 +52,7 @@
         <%= f.label :height, class: "right inline", title: "Choose your gender", data: {tooltip: true} %>
       </div>
       <div class="small-9 columns">
-        <%= f.number_field :height, :placeholder => "Height in centimeters" %>
+        <%= f.number_field :height, :placeholder => "in centimeters" %>
       </div>
     </div>
     <div>

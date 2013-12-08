@@ -3,7 +3,9 @@ class ExerciseLog < ActiveRecord::Base
   belongs_to :user
   belongs_to :activity
 
+  validates :activity_id, :exercise_date, :length, :presence => true
+
   def calculate_calories_burned
-      return self.activity.calories_burned / 60.0 * self.length
+      return self.length.present? ? self.activity.calories_burned / 60.0 * self.length : nil
   end
 end

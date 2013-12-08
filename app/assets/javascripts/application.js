@@ -18,11 +18,10 @@
 //= require morris
 //= require pwstrength
 //= require chosen.jquery
-//=require foundation/foundation
-//=require foundation/foundation.forms
-//=require foundation/foundation.tooltips
-//=require foundation/foundation.topbar
-//=require foundation/foundation.placeholder
+//= require foundation/foundation
+//= require foundation/foundation.topbar
+//= require foundation/foundation.forms
+//= require foundation/foundation.tooltips
 //= require_tree .
 
 $(function(){ $(document).foundation(

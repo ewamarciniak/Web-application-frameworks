@@ -1,9 +1,6 @@
 <%= form_for(@food_intake_log) do |f| %>
     <% if @food_intake_log.errors.any? %>
         <div id="error_explanation">
-          <h2><%= pluralize(@food_intake_log.errors.count, "error") %> prohibited this food_intake_log from being
-            saved:</h2>
-
           <ul>
             <% @food_intake_log.errors.full_messages.each do |msg| %>
                 <li><%= msg %></li>

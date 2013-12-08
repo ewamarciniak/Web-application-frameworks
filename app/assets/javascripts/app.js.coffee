@@ -1,4 +1,11 @@
 jQuery ->
+  $('#notice:not(:empty)').removeClass("hide")
+  $('#notice_signed_in:not(:empty)').removeClass("hide")
+  console.log("Done")
+  $('#alert:not(:empty)').removeClass("hide")
+  $('#alert_signed_in:not(:empty').removeClass("hide")
+  console.log("Done")
+
   $('#accordion').accordion()
   $('.chosen-select').chosen()
   $('#user_password').pwstrength()

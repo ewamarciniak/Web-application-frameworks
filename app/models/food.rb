@@ -5,4 +5,5 @@ class Food < ActiveRecord::Base
 
   has_many :food_intake_logs
   belongs_to :food_category
+  validates :exercise_date, :presence => true
 end

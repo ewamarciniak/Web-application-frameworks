@@ -34,18 +34,27 @@
   <img src="http://sierrafire.cr.usgs.gov/images/loading.gif"/>
   <span>Loading, please wait ...</span>
 </div>
+
 <div class="large-10 small-centered columns" style="z-index:1;">
+
   <% if current_user %>
       <div id="content">
+        <div>
+        <div id="notice_signed_in" class="notice hide"><%= notice %></div>
+        <div id="alert_signed_n" class="alert hide"><%= alert %></div>
+        </div>
         <div class="large-2 columns sidebar">
           <%= render "side" %>
         </div>
         <div class="large-10 columns">
+
           <%= yield %>
         </div>
       </div>
   <% else %>
       <div id="content">
+        <div id="notice" class="notice hide"><%= notice %></div>
+        <div id="alert" class="alert hide"><%= alert %></div>
         <%= yield %>
       </div>
   <% end %>
