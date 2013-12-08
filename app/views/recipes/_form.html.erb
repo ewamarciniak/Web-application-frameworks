@@ -79,10 +79,10 @@
       </div>
       <div class="small-9 columns">
         <% @ingredients.each do |ingredient| %>
-            <p>
+            <div class="small-3 columns">
               <%= check_box_tag "recipe[ingredient_ids][]", ingredient.id, @recipe.ingredients.include?(ingredient) %>
               <%= ingredient.name %>
-            </p>
+            </div>
         <% end %>
       </div>
     </div>

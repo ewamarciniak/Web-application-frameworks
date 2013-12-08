@@ -17,7 +17,7 @@
 //= require raphael
 //= require morris
 //= require pwstrength
-//= require chosen.jquery
+//= require chosen
 //= require foundation/foundation
 //= require foundation/foundation.topbar
 //= require foundation/foundation.forms

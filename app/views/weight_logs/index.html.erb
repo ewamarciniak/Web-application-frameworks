@@ -1,6 +1,5 @@
 <h1>Listing weight logs</h1>
-
-
+<% if @weight_logs.any? %>
 <table>
   <tr>
     <th>Weight</th>
@@ -20,7 +19,9 @@
   </tr>
 <% end %>
 </table>
-
+<% else %>
+    <div>You have not logged any weight measurements yet. Press the button below to log one.</div>
+    <% end %>
 <br />
 
 <%= link_to 'New Weight log', new_weight_log_path, class: "small button radius" %>

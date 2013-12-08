@@ -1,37 +1,36 @@
 <h1>Profile</h1>
+<% if @profile %>
+    <table>
+      <tr>
+        <th>Gender</th>
+        <% if @profile.gender == "female" %>
+            <th>Pregnant</th>
+            <th>Brestfeeding</th>
+        <% end %>
+        <th>Height</th>
+        <th>Dob</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr>
+        <td><%= @profile.gender %></td>
 
-<table>
-  <tr>
-    <th>Gender</th>
-    <% if @profile.gender == "female" %>
-        <th>Pregnant</th>
-        <th>Brestfeeding</th>
-    <% end %>
-    <th>Height</th>
-    <th>Dob</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+        <% if @profile.gender == "female" %>
+            <td><%= @profile.pregnant %></td>
+            <td><%= @profile.brestfeeding %></td>
+        <% end %>
+        <td><%= @profile.height %></td>
+        <td><%= @profile.dob %></td>
+        <td><%= link_to 'Show', @profile %></td>
+        <td><%= link_to 'Edit', edit_profile_path(@profile) %></td>
+        <td><%= link_to 'Destroy', @profile, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+      </tr>
 
-
-  <tr>
-    <td><%= @profile.gender %></td>
-
-    <% if @profile.gender == "female" %>
-        <td><%= @profile.pregnant %></td>
-        <td><%= @profile.brestfeeding %></td>
-    <% end %>
-    <td><%= @profile.height %></td>
-    <td><%= @profile.dob %></td>
-    <td><%= link_to 'Show', @profile %></td>
-    <td><%= link_to 'Edit', edit_profile_path(@profile) %></td>
-    <td><%= link_to 'Destroy', @profile, method: :delete, data: {confirm: 'Are you sure?'} %></td>
-  </tr>
-
-</table>
-
-<br/>
-<% unless @profile %>
-    <%= link_to 'New Profile', new_profile_path %>
+    </table>
+<% else %>
+    <p>Please submit your profile information.</p>
+    <%= link_to 'Create Profile', new_profile_path, class: "small button radius" %>
 <% end %>
+
+

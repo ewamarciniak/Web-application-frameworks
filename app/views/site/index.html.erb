@@ -3,7 +3,6 @@
     <div class="small-6 columns">
       <% if current_user %>
           <h1>Welcome!</h1>
-          <%= image_tag("/assets/body.jpg", {:alt => "home image", :width => 25, :height => 25}) %>
           <%= link_to 'Start using today', new_registration_path(:user), class: "large button radius" %>
           <h2 lass="title red_coloured">Get lean, fabulous and healthy.</h2>
 

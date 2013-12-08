@@ -13,7 +13,7 @@
         <%= f.label :date_of_birth, class: "right inline", title: "Select your date of birth", data: {tooltip: true} %>
       </div>
       <div class="small-9 columns in_one_line left">
-        <%= f.date_select :dob, {:include_blank => true, :start_year => 1920} %>
+        <%= f.date_select :dob, {:include_blank => true, :start_year => 1920, :end_year => 1995} %>
       </div>
     </div>
 

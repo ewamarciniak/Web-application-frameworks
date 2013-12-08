@@ -25,13 +25,20 @@
           <strong id="min"> <%= min_bmi_normal %></strong><strong> kg</strong> and
           <strong id="max"><%= max_bmi_normal %></strong> <strong>kg</strong>.
         </div>
-        <% if current_user.weight_logs.last.weight > min_bmi_normal && current_user.weight_logs.last.weight < max_bmi_normal %>
-            <div>You weight is currently <strong>within the healthy range.</strong></div>
+        <% if current_user.weight_logs.any? %>
+            <% if current_user.weight_logs.last.weight > min_bmi_normal && current_user.weight_logs.last.weight < max_bmi_normal %>
+                <div>You weight is currently <strong>within the healthy range.</strong></div>
+            <% else %>
+                <div>You weight is currently <strong>outside the healthy range.</strong></div>
+            <% end %>
         <% else %>
-            <div>You weight is currently <strong>outside the healthy range.</strong></div>
+            <br/>
+            <div> Log your weight measurements to see the progress graph.</div>
+            <br/>
+            <%= link_to 'Log your weight measurement', new_weight_log_path, class: "small button radius" %>
         <% end %>
     <% end %>
-    <div id="myfirstchart"class="graph-container">
+    <div id="myfirstchart" class="graph-container">
       <%= content_tag :div, "", id: "weight_logs_chart", data: {weight_logs: @weight_logs} %>
     </div>
 <% end %>
