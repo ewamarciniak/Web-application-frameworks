@@ -34,7 +34,7 @@ DietApp::Application.configure do
   config.assets.compress = true
 
   # Expands the lines which load the assets
-  config.assets.debug = true
+  config.assets.debug = false
 
   Paperclip.options[:command_path] = "/usr/local/bin/"
 end

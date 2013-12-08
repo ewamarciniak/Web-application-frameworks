@@ -20,7 +20,7 @@ module ApplicationHelper
   end
 
   def relevant_food_intake_logs
-    FoodIntakeLog.where(user_id: current_user.id, intake_date: 1.week.ago.beginning_of_day..Time.zone.now)
+    FoodIntakeLog.where(user_id: current_user.id, intake_date: 4.week.ago.beginning_of_day..Time.zone.now)
   end
 
   def relevant_exercise_logs
