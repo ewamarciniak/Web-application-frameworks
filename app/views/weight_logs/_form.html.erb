@@ -1,7 +1,6 @@
 <%= form_for(@weight_log) do |f| %>
     <% if @weight_log.errors.any? %>
         <div id="error_explanation">
-          <h2><%= pluralize(@weight_log.errors.count, "error") %> prohibited this weight_log from being saved:</h2>
           <ul>
             <% @weight_log.errors.full_messages.each do |msg| %>
                 <li><%= msg %></li>
@@ -14,15 +13,15 @@
         <%= f.label :weight, class: "right inline", title: "Weight in kilograms", data: {tooltip: true} %>
       </div>
       <div class="small-9 columns">
-        <%= f.text_field :weight %>
+        <%= f.text_field :weight, :placeholder => "in kilograms" %>
       </div>
     </div>
     <div class="row collapse">
       <div class="small-3 columns">
-        <%= f.label :date_of_measurement, class: "right inline", title: "Select the date of the weight measurement", data: {tooltip: true} %>
+        <%= f.label :measurement_on, class: "right inline", title: "Select the date of the weight measurement", data: {tooltip: true} %>
       </div>
       <div class="small-9 columns">
-        <%= f.text_field :measured_on %>
+        <%= f.text_field :measured_on,  :placeholder => "date of the measurement"  %>
       </div>
     </div>
     <div>

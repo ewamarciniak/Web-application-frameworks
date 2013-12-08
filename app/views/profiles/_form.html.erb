@@ -10,7 +10,7 @@
     <% end %>
     <div class="row collapse">
       <div class="small-3 columns">
-        <%= f.label :date_of_birth, class: "right inline", title: "Choose your gender", data: {tooltip: true} %>
+        <%= f.label :date_of_birth, class: "right inline", title: "Select your date of birth", data: {tooltip: true} %>
       </div>
       <div class="small-9 columns in_one_line left">
         <%= f.date_select :dob, {:include_blank => true, :start_year => 1920} %>
@@ -31,7 +31,7 @@
     <div id="woman" style="display:none;">
       <div class="row collapse">
         <div class="small-3 columns">
-          <%= f.label :pregnant, class: "right inline", title: "Choose your gender", data: {tooltip: true} %>
+          <%= f.label :pregnant, class: "right inline", title: "Please tick in pregnant", data: {tooltip: true} %>
         </div>
         <div class="small-9 columns">
           <%= f.check_box :pregnant %>
@@ -40,7 +40,7 @@
 
       <div class="row collapse">
         <div class="small-3 columns">
-          <%= f.label :brestfeeding, class: "right inline", title: "Choose your gender", data: {tooltip: true} %>
+          <%= f.label :brestfeeding, class: "right inline", title: "Please tick in brestfeeding", data: {tooltip: true} %>
         </div>
         <div class="small-9 columns">
           <%= f.check_box :brestfeeding %>
@@ -49,7 +49,7 @@
     </div>
     <div class="row collapse">
       <div class="small-3 columns">
-        <%= f.label :height, class: "right inline", title: "Choose your gender", data: {tooltip: true} %>
+        <%= f.label :height, class: "right inline", title: "Please type in your height in centimetres", data: {tooltip: true} %>
       </div>
       <div class="small-9 columns">
         <%= f.number_field :height, :placeholder => "in centimeters" %>
