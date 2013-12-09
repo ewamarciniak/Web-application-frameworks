@@ -8,10 +8,10 @@
     <section class="top-bar-section">
       <ul class="right">
         <li><a href="/">Home</a></li>
-        <li><a href="/diet_planner">Diet Planner</a></li>
+        <li><a href="/stats/index">Diet Planner</a></li>
         <li><a href="/recipes">Healthy Recipes</a></li>
-        <li><a href="/news">Healthy living News</a></li>
         <% if current_user %>
+            <li id="logged_in">logged in as <%= current_user.email %></li>
             <li><%= link_to 'Logout', destroy_user_session_path, :method => :delete %></li>
         <% else %>
             <li><%= link_to 'Register',  new_registration_path(:user) %></li>

@@ -1,10 +1,8 @@
 jQuery ->
   $('#notice:not(:empty)').removeClass("hide")
   $('#notice_signed_in:not(:empty)').removeClass("hide")
-  console.log("Done")
   $('#alert:not(:empty)').removeClass("hide")
-  $('#alert_signed_in:not(:empty').removeClass("hide")
-  console.log("Done")
+  $('#alert_signed_in:not(:empty)').removeClass("hide")
 
   $('#accordion').accordion()
   $('.chosen-select').chosen()
@@ -44,3 +42,8 @@ jQuery ->
     goals: [$('#min').text(), $('#max').text()]
     goalStrokeWidth: 1
     goalLineColors: ['#FF0000' ]
+
+    $(document).on("click","#nav .top-bar-section ul li a", ->
+      $(this).parent().addClass("active")
+      console.log($(this))
+    )

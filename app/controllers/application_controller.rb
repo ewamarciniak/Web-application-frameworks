@@ -16,6 +16,6 @@ class ApplicationController < ActionController::Base
     redirect_to :back, :alert => "You are not authorized to access the requested page"
   #catch the exception if HTTP referer is not set and redirect to weight log page
   rescue ActionController::RedirectBackError
-    redirect_to weight_logs_path
+    redirect_to weight_logs_path, :alert => "You are not authorized to access the requested page"
   end
 end
