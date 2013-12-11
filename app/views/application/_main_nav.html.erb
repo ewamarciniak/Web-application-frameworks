@@ -7,15 +7,16 @@
     </ul>
     <section class="top-bar-section">
       <ul class="right">
-        <li><a href="/">Home</a></li>
-        <li><a href="/stats/index">Diet Planner</a></li>
-        <li><a href="/recipes">Healthy Recipes</a></li>
+        <li> <%= link_to "Home", site_index_path, :class => "#{'selected' if @tab=='site'}" %></li>
+        <li> <%= link_to "Diet Planner", stats_index_path, :class => "#{'selected' if @tab=='planner' || @tab == 'profile'|| @tab == 'images' }" %></li>
+        <li> <%= link_to "Healthy Recipes", recipes_path, :class => "#{'selected' if @tab=='recipes'}" %></li>
         <% if current_user %>
             <li id="logged_in">logged in as <%= current_user.email %></li>
             <li><%= link_to 'Logout', destroy_user_session_path, :method => :delete %></li>
+
         <% else %>
-            <li><%= link_to 'Register',  new_registration_path(:user) %></li>
-            <li><%= link_to 'Login', new_user_session_path %></li>
+            <li><%= link_to 'Register',  new_registration_path(:user), :class => "#{'selected' if @tab=='register'}" %></li>
+            <li><%= link_to 'Login', new_user_session_path , :class => "#{'selected' if @tab=='login'}" %></li>
         <% end %>
       </ul>
     </section>

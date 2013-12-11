@@ -4,6 +4,7 @@ class FoodIntakeLogsController < ApplicationController
   # GET /food_intake_logs.json
   def index
     @food_intake_logs = current_user.food_intake_logs.all
+    @tab="food_intake_logs"
 
     respond_to do |format|
       format.html # index.html.erb

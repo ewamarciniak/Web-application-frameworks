@@ -46,7 +46,7 @@ module ApplicationHelper
       end
       unless relevant_exercise_logs.empty?
         relevant_exercise_logs.each do |exercise_log|
-          calories_burned += exercise_log.calories * 1.0
+          calories_burned += exercise_log.calories_burned * 1.0
         end
       end
 

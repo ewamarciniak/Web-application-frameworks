@@ -709,9 +709,22 @@ a:visited.button{
 }
 
 #logged_in {
-  color: #7cc4ff;
+  color: #2ba6cb;
   font-size: 0.8125em;
-  font-weight: bold;
+  font-weight: 700;
   display: block;
   padding-top: 1em;
+}
+
+ul.right a.selected  {
+  color: #383c36;
+  font-weight: 700;
+  background-color: #7cc4ff ;
+}
+
+ul.side-nav a.selected  {
+  color: #383c36;
+  font-weight: 700;
+  background-color: white;
+  border-bottom: 1px solid #383c36;
 }

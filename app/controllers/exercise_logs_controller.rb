@@ -4,6 +4,7 @@ class ExerciseLogsController < ApplicationController
   # GET /exercise_logs.json
   def index
     @exercise_logs = current_user.exercise_logs.all
+    @tab="exercise_logs"
 
     respond_to do |format|
       format.html # index.html.erb

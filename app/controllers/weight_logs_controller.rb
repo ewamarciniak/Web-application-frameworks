@@ -5,6 +5,7 @@ class WeightLogsController < ApplicationController
   # GET /weight_logs.json
   def index
     @weight_logs = current_user.weight_logs.all
+    @tab="weight_logs"
 
     respond_to do |format|
       format.html # index.html.erb

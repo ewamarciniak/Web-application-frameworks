@@ -43,7 +43,3 @@ jQuery ->
     goalStrokeWidth: 1
     goalLineColors: ['#FF0000' ]
 
-    $(document).on("click","#nav .top-bar-section ul li a", ->
-      $(this).parent().addClass("active")
-      console.log($(this))
-    )

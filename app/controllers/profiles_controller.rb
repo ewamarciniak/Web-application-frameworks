@@ -4,6 +4,7 @@ class ProfilesController < ApplicationController
   # GET /profiles.json
   def index
     @profile = current_user.profile
+    @tab = 'profile'
 
     respond_to do |format|
       format.html # index.html.erb

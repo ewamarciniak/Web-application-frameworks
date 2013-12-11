@@ -4,6 +4,7 @@ class IngredientsController < ApplicationController
   # GET /ingredients.json
   def index
     @ingredients = Ingredient.all
+    @tab="ingredients"
 
     respond_to do |format|
       format.html # index.html.erb

@@ -4,6 +4,7 @@ class ActivitiesController < ApplicationController
   # GET /activities.json
   def index
     @activities = Activity.all
+    @tab="activities"
 
     respond_to do |format|
       format.html # index.html.erb

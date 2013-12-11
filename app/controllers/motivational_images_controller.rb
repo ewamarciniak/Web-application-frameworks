@@ -1,8 +1,10 @@
 class MotivationalImagesController < ApplicationController
+  before_filter :authenticate_user!
   # GET /motivational_images
   # GET /motivational_images.json
   def index
     @motivational_images = current_user.motivational_images.all
+    @tab="images"
 
     respond_to do |format|
       format.html # index.html.erb
