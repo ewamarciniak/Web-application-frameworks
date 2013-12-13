@@ -1,10 +1,15 @@
 class ProfilesController < ApplicationController
   before_filter :authenticate_user!
+  before_filter :set_tab
   # GET /profiles
   # GET /profiles.json
+
+  def set_tab
+    @tab = 'profile'
+  end
+
   def index
     @profile = current_user.profile
-    @tab = 'profile'
 
     respond_to do |format|
       format.html # index.html.erb

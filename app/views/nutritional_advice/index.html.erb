@@ -1,31 +1,44 @@
 <h1>Nutritional Advice</h1>
-<p> The following advice is given based on your logs from the past 4 weeks. </p>
-<div id="accordion">
-  <h3>Calories Intake</h3>
+<% if current_user.profile %>
 
-  <div ><p><%= calories_advice %></p></div>
+    <p> The following advice is given based on your logs from the past 4 weeks. </p>
+    <% if current_user.profile.gender %>
+        <div id="accordion">
+          <h3>Calories Intake</h3>
 
-  <h3>Proteins</h3>
+          <div><p><%= calories_advice %></p></div>
 
-  <div><p><%= protein_advice %></p></div>
+          <h3>Proteins</h3>
 
-  <h3>Carbohydrates</h3>
+          <div><p><%= protein_advice %></p></div>
 
-  <div><p><%= carbohydrates_advice %></p></div>
+          <h3>Carbohydrates</h3>
 
-  <h3>Sugars</h3>
+          <div><p><%= carbohydrates_advice %></p></div>
 
-  <div><p><%= sugars_advice %></p></div>
+          <h3>Sugars</h3>
 
-  <h3>Saturated fats</h3>
+          <div><p><%= sugars_advice %></p></div>
 
-  <div><p><%= saturated_fats_advice %></p></div>
+          <h3>Saturated fats</h3>
 
-  <h3>Unsaturated fats</h3>
+          <div><p><%= saturated_fats_advice %></p></div>
 
-  <div><p><%= unsaturated_fats_advice %></p></div>
+          <h3>Unsaturated fats</h3>
 
-  <h3>Fibre</h3>
+          <div><p><%= unsaturated_fats_advice %></p></div>
 
-  <div><p><%= fibre_advice %></p></div>
-</div>
+          <h3>Fibre</h3>
+
+          <div><p><%= fibre_advice %></p></div>
+        </div>
+    <% else %>
+
+        <p> Please submit your gender information to avail of the nutritional advice. </p>
+
+    <% end %>
+
+<% else %>
+
+    <p> Please submit profile information to fully avail of the nutritional advice. </p>
+<% end %>

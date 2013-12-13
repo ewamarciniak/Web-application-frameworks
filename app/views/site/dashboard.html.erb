@@ -1,0 +1,10 @@
+<div id="display">
+<h1>Welcome!</h1>
+
+<p>You are logged with this email address: <%= current_user.email %>.</p>
+
+<% unless current_user.profile %>
+ Please submit your profile information to avail of the full benefits of the site.
+    <%= link_to 'Create Profile', new_profile_path, class: "small button radius" %>
+<% end %>
+</div>

@@ -1,10 +1,15 @@
 class FoodIntakeLogsController < ApplicationController
   before_filter :authenticate_user!
+  before_filter :set_tab
   # GET /food_intake_logs
   # GET /food_intake_logs.json
+
+  def set_tab
+    @tab="food_intake_logs"
+  end
+
   def index
     @food_intake_logs = current_user.food_intake_logs.all
-    @tab="food_intake_logs"
 
     respond_to do |format|
       format.html # index.html.erb

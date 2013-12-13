@@ -22,8 +22,11 @@
 //= require foundation/foundation.topbar
 //= require foundation/foundation.forms
 //= require foundation/foundation.tooltips
+//= require foundation/foundation.reveal.js
 //= require_tree .
 
 $(function(){ $(document).foundation(
 ); });
 $.get('/profiles.json',function(res){console.log(res)})
+
+

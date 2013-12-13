@@ -34,6 +34,7 @@ DietApp::Application.routes.draw do
   devise_for :users
 
   get "site/index"
+  get "site/dashboard"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,10 +1,16 @@
 class RecipesController < ApplicationController
   helper_method :sort_column, :sort_direction
+  before_filter :set_tab
   # GET /recipes
   # GET /recipes.json
+
+  def set_tab
+    @tab="recipes"
+  end
+
   def index
     @recipes = Recipe.search(params[:search]).order(sort_column + " " + sort_direction).paginate(:per_page => 5, :page => params[:page])
-    @tab="recipes"
+    @tab = 'recipes'
   end
 
   # GET /recipes/1

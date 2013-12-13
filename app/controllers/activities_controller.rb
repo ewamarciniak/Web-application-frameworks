@@ -1,10 +1,15 @@
 class ActivitiesController < ApplicationController
   before_filter :ensure_admin
+  before_filter :set_tab
   # GET /activities
   # GET /activities.json
+
+  def set_tab
+    @tab="activities"
+  end
+
   def index
     @activities = Activity.all
-    @tab="activities"
 
     respond_to do |format|
       format.html # index.html.erb
@@ -43,6 +48,7 @@ class ActivitiesController < ApplicationController
   # POST /activities.json
   def create
     @activity = Activity.new(params[:activity])
+    @tab = 'activities'
 
     respond_to do |format|
       if @activity.save

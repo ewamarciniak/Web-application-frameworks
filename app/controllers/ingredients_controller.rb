@@ -1,10 +1,15 @@
 class IngredientsController < ApplicationController
   before_filter :ensure_admin
+  before_filter :set_tab
   # GET /ingredients
   # GET /ingredients.json
+
+  def set_tab
+    @tab="ingredients"
+  end
+
   def index
     @ingredients = Ingredient.all
-    @tab="ingredients"
 
     respond_to do |format|
       format.html # index.html.erb

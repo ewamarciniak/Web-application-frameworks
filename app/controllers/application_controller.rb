@@ -18,4 +18,9 @@ class ApplicationController < ActionController::Base
   rescue ActionController::RedirectBackError
     redirect_to weight_logs_path, :alert => "You are not authorized to access the requested page"
   end
+
+  #after_sign_in_path_for is called by devise
+  def after_sign_in_path_for(user)
+    "/site/dashboard"
+  end
 end

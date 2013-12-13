@@ -36,5 +36,6 @@
   <%= @recipe.directions %>
 </p>
 
-<%= link_to 'Edit', edit_recipe_path(@recipe), class: "small button radius" %>
-
+<% if current_user.admin %>
+    <%= link_to 'Edit', edit_recipe_path(@recipe), class: "small button radius" %>
+<% end %>

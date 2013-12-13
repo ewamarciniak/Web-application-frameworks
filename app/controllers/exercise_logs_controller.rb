@@ -1,10 +1,15 @@
 class ExerciseLogsController < ApplicationController
   before_filter :authenticate_user!
+  before_filter :set_tab
+
   # GET /exercise_logs
   # GET /exercise_logs.json
+  def set_tab
+    @tab="exercise_logs"
+  end
+
   def index
     @exercise_logs = current_user.exercise_logs.all
-    @tab="exercise_logs"
 
     respond_to do |format|
       format.html # index.html.erb
