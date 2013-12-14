@@ -1,6 +1,6 @@
 <h1>Listing food categories</h1>
-<%= link_to 'New Food Category', new_food_category_path, id: "new_link", remote: true, class: "small button radius"  %>
-<br />  <br />
+<%= link_to 'New Food Category', new_food_category_path, id: "new_link", remote: true, class: "small button radius" %>
+<br/>  <br/>
 <table>
   <tr>
     <th>Name</th>
@@ -9,14 +9,14 @@
     <th></th>
   </tr>
 
-<% @food_categories.each do |food_category| %>
-  <tr>
-    <td><%= food_category.name %></td>
-    <td><%= link_to 'Show', food_category %></td>
-    <td><%= link_to 'Edit', edit_food_category_path(food_category) %></td>
-    <td><%= link_to 'Destroy', food_category, method: :delete, data: { confirm: 'Are you sure?', remote: true } %></td>
-  </tr>
-<% end %>
+  <% @food_categories.each do |food_category| %>
+      <tr>
+        <td><%= food_category.name %></td>
+        <td><%= link_to 'Show', food_category %></td>
+        <td><%= link_to 'Edit', edit_food_category_path(food_category) %></td>
+        <td><%= link_to 'Destroy', food_category, method: :delete, data: {confirm: 'Are you sure?', remote: true} %></td>
+      </tr>
+  <% end %>
 
 </table>
 <div id="new_rec"></div>

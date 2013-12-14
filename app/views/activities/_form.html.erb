@@ -1,35 +1,35 @@
 <div class="row collapse">
   <%= form_for(@activity) do |f| %>
-    <% if @activity.errors.any? %>
-        <div id="error_explanation">
-          <ul>
-            <% @activity.errors.full_messages.each do |msg| %>
-                <li><%= msg %></li>
-            <% end %>
-          </ul>
+      <% if @activity.errors.any? %>
+          <div id="error_explanation">
+            <ul>
+              <% @activity.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+      <% end %>
+      </div>
+      <div class="row collapse">
+        <div class="small-3 columns">
+          <%= f.label :name, class: "right inline", title: "Type of activity", data: {tooltip: true} %>
         </div>
-    <% end %>
-</div>
-    <div class="row collapse">
-      <div class="small-3 columns">
-        <%= f.label :name, class: "right inline", title: "Type of activity", data: {tooltip: true} %>
+        <div class="small-9 columns">
+          <%= f.text_field :name %>
+        </div>
       </div>
-      <div class="small-9 columns">
-        <%= f.text_field :name %>
+      <div class="row collapse">
+        <div class="small-3 columns">
+          <%= f.label :calories_burned, class: "right inline", title: "Approx number of calories burned in an hour", data: {tooltip: true} %>
+        </div>
+        <div class="small-9 columns">
+          <%= f.number_field :calories_burned %>
+        </div>
       </div>
-    </div>
-    <div class="row collapse">
-      <div class="small-3 columns">
-        <%= f.label :calories_burned, class: "right inline", title: "Approx number of calories burned in an hour", data: {tooltip: true} %>
-      </div>
-      <div class="small-9 columns">
-        <%= f.number_field :calories_burned %>
-      </div>
-    </div>
 
-    <div class="row collapse">
-      <div class="small-9 small-offset-3 columns">
-        <%= f.submit %>
+      <div class="row collapse">
+        <div class="small-9 small-offset-3 columns">
+          <%= f.submit %>
+        </div>
       </div>
-    </div>
-<% end %>
+  <% end %>

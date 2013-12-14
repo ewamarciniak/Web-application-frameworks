@@ -1,13 +1,13 @@
 <%= form_for(@ingredient) do |f| %>
-  <% if @ingredient.errors.any? %>
-    <div id="error_explanation">
-      <ul>
-      <% @ingredient.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+    <% if @ingredient.errors.any? %>
+        <div id="error_explanation">
+          <ul>
+            <% @ingredient.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
     <div class="row collapse">
       <div class="small-3 columns">
         <%= f.label :name, class: "right inline", title: "Name of the ingredient (singular)", data: {tooltip: true} %>

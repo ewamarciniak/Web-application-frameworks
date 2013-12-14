@@ -1,62 +1,62 @@
 <h1>Nutritional value</h1>
-<%= link_to 'Back', food_intake_logs_path, class: "small button radius"  %>
- <table>
-<tr>
-  <td class="bold">Intake date:</td>
-  <td><%= @food_intake_log.intake_date %></td>
-</tr>
+<%= link_to 'Back', food_intake_logs_path, class: "small button radius" %>
+<table>
+  <tr>
+    <td class="bold">Intake date:</td>
+    <td><%= @food_intake_log.intake_date %></td>
+  </tr>
 
-<tr>
-  <td class="bold">Intake time:</td>
-  <td><%= @food_intake_log.intake_time %></td>
-</tr>
+  <tr>
+    <td class="bold">Intake time:</td>
+    <td><%= @food_intake_log.intake_time %></td>
+  </tr>
 
-<tr>
-  <td class="bold">Food:</td>
-  <td><%= @food_intake_log.food.name %></td>
-</tr>
+  <tr>
+    <td class="bold">Food:</td>
+    <td><%= @food_intake_log.food.name %></td>
+  </tr>
 
-<tr>
-  <td class="bold">Amount:</td>
-  <td><%= @food_intake_log.amount %></td>
-</tr>
-<tr>
-  <td class="bold">Calories:</td>
-  <td><%= @food_intake_log.calories %></td>
-</tr>
+  <tr>
+    <td class="bold">Amount:</td>
+    <td><%= @food_intake_log.amount %></td>
+  </tr>
+  <tr>
+    <td class="bold">Calories:</td>
+    <td><%= @food_intake_log.calories %></td>
+  </tr>
 
-<tr>
-  <td class="bold">Carbs:</td>
-  <td><%= @food_intake_log.carbohydrates %></td>
-</tr>
+  <tr>
+    <td class="bold">Carbs:</td>
+    <td><%= @food_intake_log.carbohydrates %></td>
+  </tr>
 
-<tr>
-  <td class="bold">Cholesterol:</td>
-  <td><%= @food_intake_log.cholesterol %></td>
-</tr>
-<tr>
-  <td class="bold">Fibre:</td>
-  <td><%= @food_intake_log.fibre %></td>
-</tr>
+  <tr>
+    <td class="bold">Cholesterol:</td>
+    <td><%= @food_intake_log.cholesterol %></td>
+  </tr>
+  <tr>
+    <td class="bold">Fibre:</td>
+    <td><%= @food_intake_log.fibre %></td>
+  </tr>
 
-<tr>
-  <td class="bold">Protein:</td>
-  <td><%= @food_intake_log.protein %></td>
-</tr>
+  <tr>
+    <td class="bold">Protein:</td>
+    <td><%= @food_intake_log.protein %></td>
+  </tr>
 
-<tr>
-  <td class="bold">Saturated fats:</td>
-  <td><%= @food_intake_log.saturated_fats %></td>
-</tr>
+  <tr>
+    <td class="bold">Saturated fats:</td>
+    <td><%= @food_intake_log.saturated_fats %></td>
+  </tr>
 
-<tr>
-  <td class="bold">Unsaturated fats:</td>
-  <td><%= @food_intake_log.unsaturated_fats %></td>
-</tr>
+  <tr>
+    <td class="bold">Unsaturated fats:</td>
+    <td><%= @food_intake_log.unsaturated_fats %></td>
+  </tr>
 
-<tr>
-  <td class="bold">Sugars:</td>
-  <td><%= @food_intake_log.sugars %></td>
-</tr>
- </table>
-<%= link_to 'Edit', edit_food_intake_log_path(@food_intake_log), class: "small button radius"  %>|
+  <tr>
+    <td class="bold">Sugars:</td>
+    <td><%= @food_intake_log.sugars %></td>
+  </tr>
+</table>
+<%= link_to 'Edit', edit_food_intake_log_path(@food_intake_log), class: "small button radius" %>|

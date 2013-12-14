@@ -6,10 +6,11 @@ class Ingredient < ActiveRecord::Base
   validates :name, :presence => true
 
   private
-
+  #check if dependant recipes logs exist before deleting ingredient
   def check_for_recipes
+    recipes = self.recipes.map(&:id)
     if recipes.any?
-      self.errors.add :base,"Cannot delete ingredient while dependant recipes exist."
+      self.errors.add :base, "Cannot delete ingredient while dependant recipes exist."
       return false
     end
   end

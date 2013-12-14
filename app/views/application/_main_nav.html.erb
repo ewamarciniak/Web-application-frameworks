@@ -11,11 +11,12 @@
         <li> <%= link_to "Diet Planner", site_dashboard_path, :class => "#{'selected' if DIET_PLANNER.include?(@tab)}" %></li>
         <li> <%= link_to "Healthy Recipes", recipes_path, :class => " #{'selected' if @tab=='recipes'}" %></li>
         <% if current_user %>
-            <li class="session"><%= link_to 'Logout', destroy_user_session_path, :method => :delete, class: "small red button radius" %></li></li>
+            <li class="session"><%= link_to 'Logout', destroy_user_session_path, :method => :delete, class: "small red button radius" %></li>
+            </li>
 
         <% else %>
-            <li class="session"><%= link_to 'Register',  new_registration_path(:user), :class => "small button radius #{'selected' if @tab=='register'}" %></li>
-            <li class="session"><%= link_to 'Login', new_user_session_path , class: "small button radius" %></li>
+            <li class="session"><%= link_to 'Register', new_registration_path(:user), :class => "small button radius #{'selected' if @tab=='register'}" %></li>
+            <li class="session"><%= link_to 'Login', new_user_session_path, class: "small button radius" %></li>
         <% end %>
       </ul>
     </section>

@@ -1,5 +1,5 @@
 <h1>Image</h1>
-<%= link_to 'Back', motivational_images_path, class: "small button radius"  %>
+<%= link_to 'Back', motivational_images_path, class: "small button radius" %>
 <p>
 <td><%= image_tag @motivational_image.picture.url(:large) %></td>
 </p>
@@ -8,5 +8,5 @@
   <%= @motivational_image.caption %>
 </p>
 
-<%= link_to 'Edit', edit_motivational_image_path(@motivational_image), class: "small button radius"  %>
+<%= link_to 'Edit', edit_motivational_image_path(@motivational_image), class: "small button radius" %>
 
