@@ -9,7 +9,7 @@ class RecipesController < ApplicationController
   end
 
   def index
-    @recipes = Recipe.search(params[:search]).order(sort_column + " " + sort_direction).paginate(:per_page => 5, :page => params[:page])
+    @recipes = Recipe.search(params[:search]).order(sort_column + " " + sort_direction).paginate(:per_page => 2, :page => params[:page])
     @tab = 'recipes'
   end
 
