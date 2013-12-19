@@ -29,4 +29,3 @@ $(function(){ $(document).foundation(
 ); });
 $.get('/profiles.json',function(res){console.log(res)})
 
-

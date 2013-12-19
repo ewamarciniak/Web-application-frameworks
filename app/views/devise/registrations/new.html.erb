@@ -8,8 +8,11 @@
       <div class="small-3 columns">
         <%= f.label :email, class: "right inline", title: "Enter a valid email", data: {tooltip: true} %>
       </div>
-      <div class="small-9 columns">
+      <div class="small-5 columns">
         <%= f.email_field :email %>
+      </div>
+      <div class="small-4 columns">
+        <span id="emailTip">Please enter a valid email address</span>
       </div>
     </div>
 
@@ -17,20 +20,23 @@
       <div class="small-3 columns">
         <%= f.label :password, class: "right inline", title: "Enter a password between 8 and 16 characters", data: {tooltip: true} %>
       </div>
-      <div class="small-9 columns">
+      <div class="small-5 columns">
         <%= f.password_field :password, :data => {:indicator => "pwindicator"} %>
       </div>
-
+      <div class="small-4 columns"> <span id="passwordTip">Password must contain 6-15 characters</span>
+      </div>
     </div>
     <div class="row collapse">
       <div class="small-3 columns">
         <%= f.label :password_strength, class: "right inline", title: "Password Strength"%>
       </div>
-      <div class="small-9 columns">
+      <div class="small-5 columns">
         <div id="pwindicator">
           <div class="bar"></div>
           <div class="label"></div>
         </div>
+      </div>
+      <div class="small-4 columns">
       </div>
     </div>
 
@@ -38,14 +44,16 @@
       <div class="small-3 columns">
         <%= f.label :password_confirmation, class: "right inline", title: "Password confirmation should match the password ", data: {tooltip: true} %>
       </div>
-      <div class="small-9 columns">
+      <div class="small-5 columns">
         <%= f.password_field :password_confirmation %>
+      </div>
+      <div class="small-4 columns"><span id="passwordConfirmationTip">Password and confirmation must match</span>
       </div>
     </div>
 
     <div class="row collapse">
       <div class="small-9 small-offset-3 columns">
-        <%= f.submit "Register" %>
+        <%= f.submit "Register", :id => 'submit' %>
       </div>
     </div>
 <% end %>

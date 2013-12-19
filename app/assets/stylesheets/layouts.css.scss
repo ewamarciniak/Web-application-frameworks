@@ -732,3 +732,14 @@ ul.side-nav a.selected  {
 .top-bar-section ul li.session {
   margin-left: 20px;
 }
+
+#emailTip, #passwordTip, #passwordConfirmationTip {
+  float:right;
+  font-weight: bold;
+  font-size: 0.9em;
+  color: red;
+  display: none;
+  padding:3px;
+  margin: 0 0 10px 0px;
+  float:left;
+}
