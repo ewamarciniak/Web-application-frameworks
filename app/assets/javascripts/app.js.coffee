@@ -14,6 +14,7 @@ jQuery ->
       if $('#passwordConfirmationTip').is(":hidden")
         $('#passwordConfirmationTip').toggle(1000)
     if !areAllFieldsValid()
+      console.log ('logging in')
       false
   )
   $('#user_password').pwstrength()
@@ -58,10 +59,16 @@ jQuery ->
       false
 
   areAllFieldsValid = () ->
-    if !isEmail($('#user_email').val()) || !isValidPassword($('#user_password').val()) || !arePasswordsMatching($('#user_password').val(), $('#user_password_confirmation').val())
+    if !isEmail($('#user_email').val()) || !isValidPassword($('#user_password').val())
+      console.log ('1')
       false
     else
-      true
+      if ($('#user_password_confirmation').length > 0 && !arePasswordsMatching($('#user_password').val(), $('#user_password_confirmation').val()) )
+        console.log ('2')
+        false
+      else
+        console.log ('3')
+        true
 
   $('#notice:not(:empty)').removeClass("hide")
   $('#notice_signed_in:not(:empty)').removeClass("hide")
