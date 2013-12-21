@@ -1,4 +1,9 @@
+<div>
+  <div id="notice_signed_in" class="notice hide"><%= notice %></div>
+  <div id="alert_signed_in" class="alert hide"><%= alert %></div>
+</div>
 <h1>Listing exercise logs</h1>
+
 <% if @exercise_logs.any? %>
     <table>
       <tr>
@@ -19,7 +24,7 @@
             <td><%= exercise_log.length %></td>
             <td><%= link_to 'Show', exercise_log %></td>
             <td><%= link_to 'Edit', edit_exercise_log_path(exercise_log) %></td>
-            <td><%= link_to 'Destroy', exercise_log, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+            <td><%= link_to 'Destroy', exercise_log, method: :delete %></td>
           </tr>
       <% end %>
     </table>

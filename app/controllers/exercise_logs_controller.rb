@@ -47,6 +47,7 @@ class ExerciseLogsController < ApplicationController
   # POST /exercise_logs
   # POST /exercise_logs.json
   def create
+
     @exercise_log = ExerciseLog.new(params[:exercise_log])
     @exercise_log.calories_burned = @exercise_log.calculate_calories_burned
 

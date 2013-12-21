@@ -17,7 +17,6 @@ jQuery ->
     if !areAllFieldsValid()
       false
   )
-  $('#user_password').pwstrength()
 
   $('#user_email').blur( ->
     $('#user_email').css('background-color','#fff')
@@ -66,11 +65,6 @@ jQuery ->
         false
       else
         true
-
-  $('#notice:not(:empty)').removeClass("hide")
-  $('#notice_signed_in:not(:empty)').removeClass("hide")
-  $('#alert:not(:empty)').removeClass("hide")
-  $('#alert_signed_in:not(:empty)').removeClass("hide")
 
   $(document).on("click","#recipes th a, #recipes .pagination a", ->
     $.getScript(this.href)

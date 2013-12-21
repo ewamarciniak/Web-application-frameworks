@@ -23,7 +23,8 @@
 //= require foundation/foundation.forms
 //= require foundation/foundation.tooltips
 //= require foundation/foundation.reveal.js
-//= require_tree .
+//= require_tree
 
 $(function(){ $(document).foundation(
 ); });
+

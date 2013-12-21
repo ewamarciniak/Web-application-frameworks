@@ -1,5 +1,5 @@
 <div class="row collapse">
-  <%= form_for(@activity) do |f| %>
+  <%= form_for(@activity, remote: true) do |f| %>
       <% if @activity.errors.any? %>
           <div id="error_explanation">
             <ul>

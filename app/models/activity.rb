@@ -1,9 +1,9 @@
 class Activity < ActiveRecord::Base
-  attr_accessible :calories_burned, :name, :weight
+  attr_accessible :calories_burned, :name
   has_many :exercise_logs
   before_destroy :check_for_exercise_logs
 
-  validates :name, :weight, :presence => true
+  validates :name, :presence => true
 
   private
   #check if dependant exercise logs exist before deleting activity

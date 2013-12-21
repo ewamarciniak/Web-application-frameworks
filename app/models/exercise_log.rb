@@ -7,6 +7,6 @@ class ExerciseLog < ActiveRecord::Base
 
   #return number of calories burned based on the logged info
   def calculate_calories_burned
-    return self.length.present? ? self.activity.calories_burned / 60.0 * self.length : nil
+    return self.length && self.activity ? self.activity.calories_burned / 60.0 * self.length : nil
   end
 end
