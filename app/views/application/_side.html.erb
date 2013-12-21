@@ -1,20 +1,18 @@
 <ul class="side-nav">
-  <li> <%= link_to "Profile", profiles_path, :class => "#{'selected' if @tab=='profile'}" %></li>
-  <li> <%= link_to "Motivational images", motivational_images_path, :class => "#{'selected' if @tab=='images'}" %></li>
-  <li> <%= link_to "Progress Stats", stats_index_path, :class => "#{'selected' if @tab=='stats'}" %></li>
-  <li> <%= link_to "Exercise logs", exercise_logs_path, :class => "#{'selected' if @tab=='exercise_logs'}" %></li>
-  <li> <%= link_to "Food Intake logs", food_intake_logs_path, :class => "#{'selected' if @tab=='food_intake_logs'}" %></li>
-  <li> <%= link_to "Weight logs", weight_logs_path, :class => "#{'selected' if @tab=='weight_logs'}" %></li>
-  <li> <%= link_to "Nutritional advise", nutritional_advice_index_path, :class => "#{'selected' if @tab=='advice'}" %></li>
+  <li> <%= link_to "Profile", profiles_path, :class => "#{'selected' if @tab=='profile'}", :class => "side" %></li>
+  <li> <%= link_to "Motivational images", motivational_images_path, :class => "#{'selected' if @tab=='images'}", :class => "side" %></li>
+  <li> <%= link_to "Progress Stats", stats_index_path, :class => "#{'selected' if @tab=='stats'}", :class => "side" %></li>
+  <li> <%= link_to "Exercise logs", exercise_logs_path, :class => "#{'selected' if @tab=='exercise_logs'}", :class => "side" %></li>
+  <li> <%= link_to "Food Intake logs", food_intake_logs_path, :class => "#{'selected' if @tab=='food_intake_logs'}", :class => "side" %></li>
+  <li> <%= link_to "Weight logs", weight_logs_path, :class => "#{'selected' if @tab=='weight_logs'}", :class => "side" %></li>
+  <li> <%= link_to "Nutritional advise", nutritional_advice_index_path, :class => "#{'selected' if @tab=='advice'}", :class => "side" %></li>
 
   <% if current_user && current_user.admin? %>
       <li class="divider"></li>
-      <li> <%= link_to "Recipes", recipes_path, :class => "#{'selected' if @tab=='recipes'}" %></li>
       <li> <%= link_to "Ingredients", ingredients_path, :class => "#{'selected' if @tab=='ingredients'}" %></li>
-      <li class="divider"></li>
       <li> <%= link_to "Foods", foods_path, :class => "#{'selected' if @tab=='foods'}" %></li>
       <li> <%= link_to "Food categories", food_categories_path, :class => "#{'selected' if @tab=='food_categories'}" %></li>
-      <li class="divider"></li>
       <li> <%= link_to "Activities", activities_path, :class => "#{'selected' if @tab=='activities'}" %></li>
+      <li class="divider"></li>
   <% end %>
 </ul>

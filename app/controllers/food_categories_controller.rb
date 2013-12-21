@@ -23,7 +23,7 @@ class FoodCategoriesController < ApplicationController
     @food_category = FoodCategory.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html {render layout: false } # index.html.erb
       format.json { render json: @food_category }
     end
   end
@@ -63,7 +63,7 @@ class FoodCategoriesController < ApplicationController
 
     respond_to do |format|
       if @food_category.update_attributes(params[:food_category])
-        format.html { redirect_to @food_category, notice: 'Food category was successfully updated.' }
+        format.html { redirect_to food_categories_url}
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

@@ -1,5 +1,6 @@
 jQuery ->
   #validation of the registration page
+
   $('#new_user').submit( ->
     if !isEmail($('#user_email').val())
       $('#user_email').css('background-color','#f7bebe')
@@ -14,7 +15,6 @@ jQuery ->
       if $('#passwordConfirmationTip').is(":hidden")
         $('#passwordConfirmationTip').toggle(1000)
     if !areAllFieldsValid()
-      console.log ('logging in')
       false
   )
   $('#user_password').pwstrength()
@@ -60,31 +60,17 @@ jQuery ->
 
   areAllFieldsValid = () ->
     if !isEmail($('#user_email').val()) || !isValidPassword($('#user_password').val())
-      console.log ('1')
       false
     else
       if ($('#user_password_confirmation').length > 0 && !arePasswordsMatching($('#user_password').val(), $('#user_password_confirmation').val()) )
-        console.log ('2')
         false
       else
-        console.log ('3')
         true
 
   $('#notice:not(:empty)').removeClass("hide")
   $('#notice_signed_in:not(:empty)').removeClass("hide")
   $('#alert:not(:empty)').removeClass("hide")
   $('#alert_signed_in:not(:empty)').removeClass("hide")
-
-  $('#accordion').accordion()
-  $('.chosen-select').chosen()
-  $('#exercise_log_exercise_date, #food_intake_log_intake_date, #weight_log_measured_on' ).datepicker
-    dateFormat: 'yy-mm-dd'
-
-  if $("input#profile_gender_female").attr('checked')
-    $("div#woman").attr('style', 'display:block;')
-  $("input[name='profile[gender]']").on('change', ->
-    $("#woman").toggle()
-  )
 
   $(document).on("click","#recipes th a, #recipes .pagination a", ->
     $.getScript(this.href)
@@ -102,16 +88,4 @@ jQuery ->
   )
 
 
-  #morris jquery library
-  Morris.Line
-    element: 'weight_logs_chart'
-    data: $('#weight_logs_chart').data('weight-logs')
-    xkey: 'measured_on'
-    ykeys: ['weight']
-    labels: ['Weight']
-    smooth: true
-    postUnits: 'kg'
-    goals: [$('#min').text(), $('#max').text()]
-    goalStrokeWidth: 1
-    goalLineColors: ['#FF0000' ]
 
