@@ -75,7 +75,10 @@ var displayResponse = function(response) { // Display fetched content from the s
         goalStrokeWidth: 1,
         goalLineColors: ['#FF0000' ]
     };
-    content.find("a").not('div#the_modal a').on("click", loadAjax); // finds every link in it and monitor the click events
+    content.find("a").not('div#the_modal a')
+        .not("div#food_intake_log_food_id_chosen a")
+        .not("div#exercise_log_activity_id_chosen a")
+        .on("click", loadAjax); // finds every link in it and monitor the click events
     content.find("form").on("submit", submitForm); // findex every form in it and monitor the submit events
 
     if ($('#myfirstchart').length>0 ){
@@ -143,3 +146,4 @@ $(".side-nav a").bind('ajax:before', function() { return false; }).on("click", l
 
 
 $('#user_password').pwstrength();
+

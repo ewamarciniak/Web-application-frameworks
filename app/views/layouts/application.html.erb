@@ -31,16 +31,16 @@
 <%= render "main_nav" %>
 
 <div class="large-10 small-centered columns">
-  <div id="loading" class="hide">
-    <img src="http://sierrafire.cr.usgs.gov/images/loading.gif" style="display:block; margin: auto; padding:0;" />
-    <span><p style="text-align: center;">Loading, please wait ...</p></span>
-  </div>
 
   <% if current_user %>
       <div class="large-2 columns sidebar">
         <%= render "side" %>
       </div>
       <div class="large-10 columns">
+        <div id="loading" class="hide">
+          <img src="/assets/loading.gif" style="display:block; margin: auto; padding:50px 0 0 0;" />
+          <span><p style="text-align: center; padding: 0 50px; margin:auto;">Loading, please wait ...</p></span>
+        </div>
         <div id="content">
           <%= yield %>
         </div>
