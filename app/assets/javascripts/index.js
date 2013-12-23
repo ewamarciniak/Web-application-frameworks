@@ -1,6 +1,6 @@
 
 var displaySideNav = function(el) {      //display sidebar only when diet planner is selected
-    console.log("displaySideNav");
+
     if (el.attr("href") != "/site/dashboard") {
         $(".side-nav").addClass('hide');
     }else {
@@ -9,7 +9,7 @@ var displaySideNav = function(el) {      //display sidebar only when diet planne
 };
 
 var displayNoticesAndAlerts = function() {
-    console.log("displayNoticesAndAlerts");
+
     $('#notice:not(:empty)').removeClass("hide");
     $('#notice_signed_in:not(:empty)').removeClass("hide");
     $('#alert:not(:empty)').removeClass("hide");
@@ -24,7 +24,7 @@ displayNoticesAndAlerts();
 
 var displayResponse = function(response) { // Display fetched content from the server on the page
     $("#loading").addClass('hide');  // hides the loading bar
-    console.log("displayResponse");
+
     var content = $("#content"); // fetch the content div
 
     var filteredResponse = $(response).find("#content").children();
@@ -89,9 +89,9 @@ var displayResponse = function(response) { // Display fetched content from the s
 
 
 var submitForm = function(e) { // 1. When a form is submitted
-    console.log("submitForm-pre");
+
     e.preventDefault(); // cancel the default action, page refresh
-    console.log("submitForm-post");
+
     $(this).find("input[type=submit]").attr("disabled", "disabled"); // find the submit button and disable it
     $(this).off("submit"); // remove the submission event from the form
 
@@ -107,9 +107,7 @@ var submitForm = function(e) { // 1. When a form is submitted
 
         data[name] = $(this).val(); // add it to the data object
     });
-    console.log(url);
-    console.log(method);
-    console.log(data);
+
     $.ajax({ // start an ajax request
         url: url, // to the following url
         type: method, // with this http verb (get / post / put / delete)
@@ -119,10 +117,10 @@ var submitForm = function(e) { // 1. When a form is submitted
 };
 
 var loadAjax = function(e) { // When a link is clicked
-    console.log("loadAjax-pre");
+
     e.stopPropagation();
     e.preventDefault(); // cancel the default action, page refresh
-    console.log("loadAjax-post");
+
     $('ul.side-nav a').css('border-bottom','none');
     $(this).attr("disabled", "disabled");
     $(this).css('border-bottom','1px solid black');
@@ -139,11 +137,90 @@ var loadAjax = function(e) { // When a link is clicked
     $.ajax({ // start an ajax request
         url: url, // to the following url
         type: method, // with this http verb (get / post / put / delete)
-        success: displayResponse // when it is done, display the content fetched
+        success: displayResponse, // when it is done, display the content fetched
+        error: function() {
+          alert('We are sorry but there was an error following your request');
+        }
     });
 };
 $(".side-nav a").bind('ajax:before', function() { return false; }).on("click", loadAjax); // monitor the navigation bar for click events
 
+var email = $('#user_email');
+var password = $('#user_password');
+var confirmation = $('#user_password_confirmation');
+var emailTip = $('#emailTip');
+var passwordTip = $('#passwordTip');
+var confirmationTip = $('#passwordConfirmationTip');
+password.pwstrength(password.val());
 
-$('#user_password').pwstrength();
+//validation of the registration page
 
+var toggleIfHidden = function(el){
+    if (el.is(":hidden")){
+        el.toggle(1000);
+    }
+};
+
+$('#new_user').submit( function() {
+    if (!isEmail(email.val())) {
+        email.css('background-color','#f7bebe');
+        toggleIfHidden(emailTip);
+    }
+
+    if (!isValidPassword(password.val())){
+        password.css('background-color','#f7bebe');
+        toggleIfHidden(passwordTip);
+    }
+
+    if (!arePasswordsMatching($('#user_password').val(), confirmation.val())) {
+        confirmation.css('background-color','#f7bebe');
+        toggleIfHidden(confirmationTip);
+    }
+
+    if (!areAllFieldsValid()) {
+        return false;
+    }
+});
+
+email.blur( function() {
+    email.css('background-color','#fff');
+    $('#emailTip').hide();
+});
+
+password.blur( function() {
+    $('#user_password').css('background-color','#fff');
+    $('#passwordTip').hide();
+});
+
+confirmation.blur( function() {
+    $('#user_password_confirmation').css('background-color','#fff');
+    $('#passwordConfirmationTip').hide()
+});
+
+var isEmail = function(string)  {
+// A variable containing a regular expression representing an email address
+    var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    return (emailPattern.test(string));
+};
+
+var isValidPassword = function(string){
+// A variable containing a regular expression representing an email address
+    var passwordPattern = /^.{6,15}$/;
+    return (passwordPattern.test(string));
+};
+
+//checks if password and confirmation match
+var arePasswordsMatching = function(password,confirmation){
+    return (confirmation.length > 0 && password == confirmation && isValidPassword(password));
+};
+
+//checks if all fields are correct
+var areAllFieldsValid = function() {
+    if (!isEmail(email.val()) || !isValidPassword(password.val())) {
+        return false;
+    } else   {
+        return (confirmation.length > 0 && arePasswordsMatching(password.val(), confirmation.val()) );
+    }
+};
+
+//end of validation
