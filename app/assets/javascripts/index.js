@@ -1,4 +1,4 @@
-
+$(document).ready(function() {
 var displaySideNav = function(el) {      //display sidebar only when diet planner is selected
 
     if (el.attr("href") != "/site/dashboard") {
@@ -40,7 +40,10 @@ var displayResponse = function(response) { // Display fetched content from the s
     content.find('#alert_signed_in:not(:empty)').removeClass("hide");
 
     //load jQuery datepicker
-    content.find('#exercise_log_exercise_date, #food_intake_log_intake_date, #weight_log_measured_on').datepicker({dateFormat: 'yy-mm-dd'});
+    content.find('#exercise_log_exercise_date, #food_intake_log_intake_date, #weight_log_measured_on').datepicker({
+        dateFormat: 'yy-mm-dd',
+        maxDate: "+0d"
+    });
     //load jQuery chosen
     content.find('.chosen-select').chosen();
     //load jQuery accordeon
@@ -63,7 +66,7 @@ var displayResponse = function(response) { // Display fetched content from the s
     );
 
     //morris jquery library
-    morrisTemplate = {
+  var morrisTemplate = {
         element: 'weight_logs_chart',
         data: $('#weight_logs_chart').data('weight-logs'),
         xkey: 'measured_on',
@@ -224,3 +227,4 @@ var areAllFieldsValid = function() {
 };
 
 //end of validation
+});
