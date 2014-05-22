@@ -31,7 +31,7 @@ end
 gem 'jquery-rails'
 gem 'debugger'
 gem 'jquery-ui-rails'
-gem "paperclip", "~> 3.4.0"
+gem "paperclip", "4.0.0"
 #required by paperclip
 gem "aws-sdk", "~> 1.7.1"
 gem 'will_paginate'
