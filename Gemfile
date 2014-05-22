@@ -28,7 +28,6 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
 gem 'debugger'
 gem 'jquery-ui-rails'
 gem "paperclip", "4.0.0"
@@ -36,6 +35,7 @@ gem "paperclip", "4.0.0"
 gem "aws-sdk", "~> 1.7.1"
 gem 'will_paginate'
 gem 'nutritious'
+gem 'jquery-rails', "~> 2.3.0"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
